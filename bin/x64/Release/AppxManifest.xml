@@ -7,7 +7,7 @@
 
   有关程序包清单文件的详细信息，请参阅 http://go.microsoft.com/fwlink/?LinkID=241727
  -->
-  <Identity Name="HeartRateWidget" Publisher="CN=ccc007ccc" Version="3.0.1.0" ProcessorArchitecture="x64" />
+  <Identity Name="HeartRateWidget" Publisher="CN=ccc007ccc" Version="3.0.2.0" ProcessorArchitecture="x64" />
   <mp:PhoneIdentity PhoneProductId="4b9dee15-da50-4b0a-8337-9b84da542023" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
     <DisplayName>HeartRateWidget</DisplayName>
@@ -111,6 +111,7 @@
   </Extensions>
   <Capabilities>
     <Capability Name="internetClient" />
+    <Capability Name="internetClientServer" />
   </Capabilities>
   <build:Metadata>
     <build:Item Name="TargetFrameworkMoniker" Value=".NETCore,Version=v5.0" />

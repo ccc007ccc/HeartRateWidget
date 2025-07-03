@@ -1,5 +1,5 @@
-MainPackage=C:\Users\14929\Documents\code\UWP\XboxGameBarSamples\Samples\WidgetSampleCS\bin\x64\Release\HeartRateWidget_3.0.1.0_x64.msix
-ResourcePack=C:\Users\14929\Documents\code\UWP\XboxGameBarSamples\Samples\WidgetSampleCS\bin\x64\Release\HeartRateWidget_3.0.1.0_scale-100.msix
-ResourcePack=C:\Users\14929\Documents\code\UWP\XboxGameBarSamples\Samples\WidgetSampleCS\bin\x64\Release\HeartRateWidget_3.0.1.0_scale-125.msix
-ResourcePack=C:\Users\14929\Documents\code\UWP\XboxGameBarSamples\Samples\WidgetSampleCS\bin\x64\Release\HeartRateWidget_3.0.1.0_scale-150.msix
-ResourcePack=C:\Users\14929\Documents\code\UWP\XboxGameBarSamples\Samples\WidgetSampleCS\bin\x64\Release\HeartRateWidget_3.0.1.0_scale-400.msix
+MainPackage=C:\Users\14929\Documents\code\UWP\XboxGameBarSamples\Samples\WidgetSampleCS\bin\x64\Release\HeartRateWidget_3.0.2.0_x64.msix
+ResourcePack=C:\Users\14929\Documents\code\UWP\XboxGameBarSamples\Samples\WidgetSampleCS\bin\x64\Release\HeartRateWidget_3.0.2.0_scale-100.msix
+ResourcePack=C:\Users\14929\Documents\code\UWP\XboxGameBarSamples\Samples\WidgetSampleCS\bin\x64\Release\HeartRateWidget_3.0.2.0_scale-125.msix
+ResourcePack=C:\Users\14929\Documents\code\UWP\XboxGameBarSamples\Samples\WidgetSampleCS\bin\x64\Release\HeartRateWidget_3.0.2.0_scale-150.msix
+ResourcePack=C:\Users\14929\Documents\code\UWP\XboxGameBarSamples\Samples\WidgetSampleCS\bin\x64\Release\HeartRateWidget_3.0.2.0_scale-400.msix

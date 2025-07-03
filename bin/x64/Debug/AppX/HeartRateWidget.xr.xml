@@ -4,22 +4,34 @@
     <RootType FullName="Windows.UI.Xaml.Application" />
     <RootType FullName="Windows.UI.Xaml.Controls.Page">
       <RootProperty Name="Background" />
+      <RootProperty Name="Resources" />
       <RootProperty Name="Content" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Media.AcrylicBrush">
+      <RootProperty Name="BackgroundSource" />
+      <RootProperty Name="FallbackColor" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Media.SolidColorBrush">
+      <RootProperty Name="Color" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Grid">
       <RootProperty Name="Background" />
       <RootProperty Name="Children" />
+      <RootProperty Name="ColumnDefinitions" />
       <RootProperty Name="MinWidth" />
       <RootProperty Name="MinHeight" />
       <RootProperty Name="CornerRadius" />
       <RootProperty Name="Padding" />
       <RootEvent Name="RightTapped" />
+      <RootMethod Name="GetColumn" />
+      <RootMethod Name="SetColumn" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Primitives.FlyoutBase">
       <RootMethod Name="GetAttachedFlyout" />
       <RootMethod Name="SetAttachedFlyout" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Flyout">
+      <RootProperty Name="ShowMode" />
       <RootProperty Name="Content" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.StackPanel">
@@ -31,21 +43,43 @@
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Padding" />
     </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.Border">
+      <RootProperty Name="BorderBrush" />
+      <RootProperty Name="BorderThickness" />
+      <RootProperty Name="Margin" />
+    </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.TextBlock">
       <RootProperty Name="Text" />
       <RootProperty Name="FontWeight" />
       <RootProperty Name="Margin" />
-      <RootProperty Name="FontSize" />
-      <RootProperty Name="VerticalAlignment" />
-      <RootProperty Name="Height" />
       <RootProperty Name="Foreground" />
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="FontSize" />
+      <RootProperty Name="Height" />
       <RootProperty Name="Padding" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.Button">
+      <RootProperty Name="Content" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootEvent Name="Click" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Slider">
       <RootProperty Name="Minimum" />
       <RootProperty Name="Maximum" />
+      <RootProperty Name="Value" />
       <RootProperty Name="StepFrequency" />
       <RootEvent Name="ValueChanged" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.ColumnDefinition">
+      <RootProperty Name="Width" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.ToggleSwitch">
+      <RootEvent Name="Toggled" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.TextBox">
+      <RootProperty Name="PlaceholderText" />
+      <RootProperty Name="InputScope" />
+      <RootEvent Name="LostFocus" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Viewbox">
       <RootProperty Name="Stretch" />
@@ -53,10 +87,7 @@
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Child" />
     </RootType>
-    <RootType FullName="Windows.UI.Xaml.Media.SolidColorBrush">
-      <RootProperty Name="Color" />
-      <RootProperty Name="Opacity" />
-    </RootType>
+    <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.StaticResourceExtension" />
     <RootType FullName="HeartRateWidget.Widget" />
   </Roots.RootTypes>
 </Roots>

@@ -10,7 +10,7 @@
   <Identity
     Name="HeartRateWidget"
     Publisher="CN=ccc007ccc"
-    Version="3.0.1.0" />
+    Version="3.0.2.0" />
 
   <mp:PhoneIdentity PhoneProductId="4b9dee15-da50-4b0a-8337-9b84da542023" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
@@ -115,5 +115,6 @@
   
   <Capabilities>
     <Capability Name="internetClient" />
+    <Capability Name="internetClientServer"/>
   </Capabilities>
 </Package>

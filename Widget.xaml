@@ -8,66 +8,80 @@
     mc:Ignorable="d"
     Background="Transparent">
 
-    <Grid Background="Transparent" RightTapped="Grid_RightTapped">
+    <Page.Resources>
+        <AcrylicBrush x:Key="AcrylicBackgroundBrush" BackgroundSource="Backdrop" FallbackColor="Black" />
+        <SolidColorBrush x:Key="SolidBackgroundBrush" Color="Black" />
+    </Page.Resources>
 
+    <Grid RightTapped="Grid_RightTapped" Background="#01000000">
         <FlyoutBase.AttachedFlyout>
-            <Flyout>
-                <StackPanel Width="120" Spacing="5">
-                    <StackPanel>
-                        <TextBlock Text="背景透明度" FontWeight="SemiBold" Margin="0,0,0,4"/>
-                        <Slider x:Name="OpacitySlider"
-                                Minimum="0"
-                                Maximum="100"
-                                StepFrequency="1"
-                                ValueChanged="OpacitySlider_ValueChanged"/>
-                    </StackPanel>
+            <Flyout ShowMode="Standard">
+                <StackPanel Width="220" Spacing="10">
 
                     <StackPanel>
-                        <TextBlock Text="组件缩放" FontWeight="SemiBold" Margin="0,0,0,4"/>
-                        <Slider x:Name="SizeSlider"
-                                Minimum="50"  
-                                Maximum="200"
-                                StepFrequency="1"
-                                ValueChanged="SizeSlider_ValueChanged"/>
+                        <TextBlock Text="API 端口号" FontWeight="SemiBold" Margin="0,0,0,4"/>
+                        <TextBox x:Name="ApiPortTextBox" 
+                                 PlaceholderText="例如: 8000" 
+                                 InputScope="Number" 
+                                 LostFocus="ApiPortTextBox_LostFocus"/>
                     </StackPanel>
+
+                    <Border BorderBrush="Gray" BorderThickness="0,1,0,0" />
+
+                    <TextBlock Text="外观设置" FontWeight="SemiBold" Margin="0,5,0,0" />
+                    <StackPanel>
+                        <TextBlock Text="模糊效果 (Acrylic)" Margin="0,5,0,4"/>
+                        <ToggleSwitch x:Name="BlurEffectToggle" Toggled="BlurEffectToggle_Toggled" />
+                    </StackPanel>
+                    <StackPanel>
+                        <TextBlock Text="背景不透明度" Margin="0,5,0,4"/>
+                        <Slider x:Name="OpacitySlider" Minimum="0" Maximum="100" StepFrequency="1" ValueChanged="OpacitySlider_ValueChanged"/>
+                    </StackPanel>
+                    <StackPanel Spacing="5">
+                        <TextBlock Text="背景颜色" Margin="0,5,0,0" />
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Text="R" Grid.Column="0" FontWeight="Bold" Foreground="Red" Margin="0,0,5,0" VerticalAlignment="Center"/>
+                            <Slider x:Name="RedSlider" Grid.Column="1" Maximum="255" ValueChanged="ColorSliders_ValueChanged"/>
+                        </Grid>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Text="G" Grid.Column="0" FontWeight="Bold" Foreground="Green" Margin="0,0,5,0" VerticalAlignment="Center"/>
+                            <Slider x:Name="GreenSlider" Grid.Column="1" Maximum="255" ValueChanged="ColorSliders_ValueChanged"/>
+                        </Grid>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Text="B" Grid.Column="0" FontWeight="Bold" Foreground="Blue" Margin="0,0,5,0" VerticalAlignment="Center"/>
+                            <Slider x:Name="BlueSlider" Grid.Column="1" Maximum="255" ValueChanged="ColorSliders_ValueChanged"/>
+                        </Grid>
+                    </StackPanel>
+                    <StackPanel>
+                        <TextBlock Text="组件缩放" Margin="0,5,0,4"/>
+                        <Slider x:Name="SizeSlider" Minimum="50" Maximum="200" Value="65" ValueChanged="SizeSlider_ValueChanged"/>
+                    </StackPanel>
+
+                    <Border BorderBrush="Gray" BorderThickness="0,1,0,0" Margin="0,10,0,0" />
+                    <Button x:Name="ResetSettingsButton" Content="重置所有设置" Click="ResetSettingsButton_Click" HorizontalAlignment="Stretch" />
 
                 </StackPanel>
             </Flyout>
         </FlyoutBase.AttachedFlyout>
 
-        <Viewbox Stretch="Uniform"
-                 HorizontalAlignment="Center"
-                 VerticalAlignment="Center">
-
-            <Grid x:Name="ContentGrid"
-                  MinWidth="0" MinHeight="0"
-                  CornerRadius="12" Padding="0">
-
-                <Grid.Background>
-                    <SolidColorBrush x:Name="BackgroundBrush" Color="Black" Opacity="0.1"/>
-                </Grid.Background>
-
-                <StackPanel Orientation="Horizontal"
-                            HorizontalAlignment="Center"
-                            VerticalAlignment="Center"
-                            Spacing="5"
-                            Padding="15, 10">
-                    <TextBlock Text="❤️"
-                               FontSize="26"
-                               VerticalAlignment="Center" Height="36"/>
-
-                    <TextBlock x:Name="HeartRateTextBlock"
-                               Text="--"
-                               FontSize="28"
-                               FontWeight="Bold"
-                               Foreground="White"
-                               VerticalAlignment="Center"/>
-
-                    <TextBlock Text="bpm"
-                               FontSize="12"
-                               Foreground="Gray"
-                               VerticalAlignment="Bottom"
-                               Padding="0,0,0,4"/>
+        <Viewbox Stretch="Uniform" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Grid x:Name="ContentGrid" MinWidth="0" MinHeight="0" CornerRadius="12" Padding="0" Background="{StaticResource SolidBackgroundBrush}">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Spacing="5" Padding="15, 10">
+                    <TextBlock Text="❤️" FontSize="26" VerticalAlignment="Center" Height="36"/>
+                    <TextBlock x:Name="HeartRateTextBlock" Text="--" FontSize="28" FontWeight="Bold" Foreground="White" VerticalAlignment="Center"/>
+                    <TextBlock Text="bpm" FontSize="12" Foreground="Gray" VerticalAlignment="Bottom" Padding="0,0,0,4"/>
                 </StackPanel>
             </Grid>
         </Viewbox>
