@@ -1,0 +1,1 @@
+C:\Users\14929\Documents\code\UWP\XboxGameBarSamples\Samples\WidgetSampleCS\HeartRateWidget.csproj;x64

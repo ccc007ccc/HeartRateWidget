@@ -1,0 +1,1 @@
+C:\Users\14929\Documents\code\UWP\XboxGameBarSamples\Samples\WidgetSampleCS\AppPackages\HeartRateWidget_3.0.0.0_Debug_Test\HeartRateWidget_3.0.0.0_x64_Debug.msixbundle

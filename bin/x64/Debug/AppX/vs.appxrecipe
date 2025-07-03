@@ -1,0 +1,435 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>CCC007</Machine>
+    <WindowsUser>14929</WindowsUser>
+    <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
+    <TargetOsVersion>10.0</TargetOsVersion>
+    <TargetOsDescription>Windows 10.0</TargetOsDescription>
+    <SolutionConfiguration>Debug|x64</SolutionConfiguration>
+    <PackageArchitecture>x64</PackageArchitecture>
+    <PackageIdentityName>4b9dee15-da50-4b0a-8337-9b84da542023</PackageIdentityName>
+    <PackageIdentityPublisher>CN=ccc007ccc</PackageIdentityPublisher>
+    <IntermediateOutputPath>C:\Users\14929\Documents\code\UWP\XboxGameBarSamples\Samples\WidgetSampleCS\obj\x64\Debug\</IntermediateOutputPath>
+    <RemoteDeploymentType>
+    </RemoteDeploymentType>
+    <PackageRegistrationPath>
+    </PackageRegistrationPath>
+    <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
+    <DeployOptionalPackages>false</DeployOptionalPackages>
+    <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
+    <LayoutDir>C:\Users\14929\Documents\code\UWP\XboxGameBarSamples\Samples\WidgetSampleCS\bin\x64\Debug\AppX</LayoutDir>
+    <RegisteredManifestChecksum>A905F01DED250DA2A4384E493768A2679D0FA2B36C07C7E9EAD4B832C8D8EE80</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>HeartRateWidget_3.0.1.0_x64__e2v97ptzavxs4</RegisteredPackageMoniker>
+    <RegisteredUserModeAppID>HeartRateWidget_e2v97ptzavxs4!App</RegisteredUserModeAppID>
+    <RegisteredPackageID>HeartRateWidget</RegisteredPackageID>
+    <RegisteredPackagePublisher>CN=ccc007ccc</RegisteredPackagePublisher>
+    <RegisteredVersion>3.0.1.0</RegisteredVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="C:\Users\14929\Documents\code\UWP\XboxGameBarSamples\Samples\WidgetSampleCS\bin\x64\Debug\Core\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2025-07-03T11:08:10.088</Modified>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="C:\Users\14929\Documents\code\UWP\XboxGameBarSamples\Samples\WidgetSampleCS\bin\x64\Debug\HeartRateWidget.exe">
+      <PackagePath>entrypoint\HeartRateWidget.exe</PackagePath>
+      <Modified>2025-07-03T11:08:09.670</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\14929\.nuget\packages\microsoft.bcl.asyncinterfaces\9.0.6\lib\netstandard2.0\Microsoft.Bcl.AsyncInterfaces.dll">
+      <PackagePath>Microsoft.Bcl.AsyncInterfaces.dll</PackagePath>
+      <Modified>2025-05-16T18:24:26.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\14929\.nuget\packages\microsoft.gaming.xboxgamebar\7.3.2506120\runtimes\win10-x64\native\Microsoft.Gaming.XboxGameBar.dll">
+      <PackagePath>Microsoft.Gaming.XboxGameBar.dll</PackagePath>
+      <Modified>2025-06-12T14:34:54.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x64.microsoft.netcore.universalwindowsplatform\6.2.14\runtimes\win10-x64\lib\uap10.0.15138\System.Runtime.dll">
+      <PackagePath>System.Runtime.dll</PackagePath>
+      <Modified>2022-06-10T14:23:28.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\14929\.nuget\packages\system.io.pipelines\9.0.6\lib\netstandard2.0\System.IO.Pipelines.dll">
+      <PackagePath>System.IO.Pipelines.dll</PackagePath>
+      <Modified>2025-05-16T18:31:12.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\14929\.nuget\packages\system.runtime.compilerservices.unsafe\6.0.0\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll">
+      <PackagePath>System.Runtime.CompilerServices.Unsafe.dll</PackagePath>
+      <Modified>2021-10-22T23:40:46.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\14929\.nuget\packages\system.text.encodings.web\9.0.6\lib\netstandard2.0\System.Text.Encodings.Web.dll">
+      <PackagePath>System.Text.Encodings.Web.dll</PackagePath>
+      <Modified>2025-05-16T18:32:38.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\14929\.nuget\packages\system.text.json\9.0.6\lib\netstandard2.0\System.Text.Json.dll">
+      <PackagePath>System.Text.Json.dll</PackagePath>
+      <Modified>2025-05-16T18:34:02.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\14929\.nuget\packages\microsoft.gaming.xboxgamebar\7.3.2506120\lib\uap10.0\Microsoft.Gaming.XboxGameBar.winmd">
+      <PackagePath>Microsoft.Gaming.XboxGameBar.winmd</PackagePath>
+      <Modified>2025-06-12T14:34:54.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\bin\10.0.18362.0\XamlCompiler\Microsoft.UI.Xaml.Markup.winmd">
+      <PackagePath>Microsoft.UI.Xaml.Markup.winmd</PackagePath>
+      <Modified>2019-03-18T10:36:56.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\14929\Documents\code\UWP\XboxGameBarSamples\Samples\WidgetSampleCS\Assets\LargeTile.scale-100.png">
+      <PackagePath>Assets\LargeTile.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2025-07-01T19:51:06.207</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\14929\Documents\code\UWP\XboxGameBarSamples\Samples\WidgetSampleCS\Assets\LargeTile.scale-125.png">
+      <PackagePath>Assets\LargeTile.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2025-07-01T19:51:06.208</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\14929\Documents\code\UWP\XboxGameBarSamples\Samples\WidgetSampleCS\Assets\LargeTile.scale-150.png">
+      <PackagePath>Assets\LargeTile.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2025-07-01T19:51:06.208</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\14929\Documents\code\UWP\XboxGameBarSamples\Samples\WidgetSampleCS\Assets\LargeTile.scale-200.png">
+      <PackagePath>Assets\LargeTile.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2025-07-01T19:51:06.209</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\14929\Documents\code\UWP\XboxGameBarSamples\Samples\WidgetSampleCS\Assets\LargeTile.scale-400.png">
+      <PackagePath>Assets\LargeTile.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2025-07-01T19:51:06.211</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\14929\Documents\code\UWP\XboxGameBarSamples\Samples\WidgetSampleCS\Assets\SmallTile.scale-100.png">
+      <PackagePath>Assets\SmallTile.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2025-07-01T19:51:06.211</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\14929\Documents\code\UWP\XboxGameBarSamples\Samples\WidgetSampleCS\Assets\SmallTile.scale-125.png">
+      <PackagePath>Assets\SmallTile.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2025-07-01T19:51:06.212</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\14929\Documents\code\UWP\XboxGameBarSamples\Samples\WidgetSampleCS\Assets\SmallTile.scale-150.png">
+      <PackagePath>Assets\SmallTile.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2025-07-01T19:51:06.212</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\14929\Documents\code\UWP\XboxGameBarSamples\Samples\WidgetSampleCS\Assets\SmallTile.scale-200.png">
+      <PackagePath>Assets\SmallTile.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2025-07-01T19:51:06.213</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\14929\Documents\code\UWP\XboxGameBarSamples\Samples\WidgetSampleCS\Assets\SmallTile.scale-400.png">
+      <PackagePath>Assets\SmallTile.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2025-07-01T19:51:06.213</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\14929\Documents\code\UWP\XboxGameBarSamples\Samples\WidgetSampleCS\Assets\SplashScreen.scale-100.png">
+      <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2025-07-01T19:51:06.214</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\14929\Documents\code\UWP\XboxGameBarSamples\Samples\WidgetSampleCS\Assets\SplashScreen.scale-125.png">
+      <PackagePath>Assets\SplashScreen.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2025-07-01T19:51:06.214</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\14929\Documents\code\UWP\XboxGameBarSamples\Samples\WidgetSampleCS\Assets\SplashScreen.scale-150.png">
+      <PackagePath>Assets\SplashScreen.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2025-07-01T19:51:06.215</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\14929\Documents\code\UWP\XboxGameBarSamples\Samples\WidgetSampleCS\Assets\SplashScreen.scale-400.png">
+      <PackagePath>Assets\SplashScreen.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2025-07-01T19:51:06.217</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\14929\Documents\code\UWP\XboxGameBarSamples\Samples\WidgetSampleCS\Assets\Square150x150Logo.scale-100.png">
+      <PackagePath>Assets\Square150x150Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2025-07-01T19:51:06.217</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\14929\Documents\code\UWP\XboxGameBarSamples\Samples\WidgetSampleCS\Assets\Square150x150Logo.scale-125.png">
+      <PackagePath>Assets\Square150x150Logo.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2025-07-01T19:51:06.218</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\14929\Documents\code\UWP\XboxGameBarSamples\Samples\WidgetSampleCS\Assets\Square150x150Logo.scale-150.png">
+      <PackagePath>Assets\Square150x150Logo.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2025-07-01T19:51:06.218</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\14929\Documents\code\UWP\XboxGameBarSamples\Samples\WidgetSampleCS\Assets\Square150x150Logo.scale-400.png">
+      <PackagePath>Assets\Square150x150Logo.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2025-07-01T19:51:06.219</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\14929\Documents\code\UWP\XboxGameBarSamples\Samples\WidgetSampleCS\Assets\Square44x44Logo.altform-unplated_targetsize-16.png">
+      <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-16.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2025-07-01T19:51:06.220</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\14929\Documents\code\UWP\XboxGameBarSamples\Samples\WidgetSampleCS\Assets\Square44x44Logo.altform-unplated_targetsize-256.png">
+      <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-256.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2025-07-01T19:51:06.220</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\14929\Documents\code\UWP\XboxGameBarSamples\Samples\WidgetSampleCS\Assets\Square44x44Logo.altform-unplated_targetsize-32.png">
+      <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-32.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2025-07-01T19:51:06.221</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\14929\Documents\code\UWP\XboxGameBarSamples\Samples\WidgetSampleCS\Assets\Square44x44Logo.altform-unplated_targetsize-48.png">
+      <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-48.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2025-07-01T19:51:06.221</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\14929\Documents\code\UWP\XboxGameBarSamples\Samples\WidgetSampleCS\Assets\Square44x44Logo.scale-100.png">
+      <PackagePath>Assets\Square44x44Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2025-07-01T19:51:06.222</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\14929\Documents\code\UWP\XboxGameBarSamples\Samples\WidgetSampleCS\Assets\Square44x44Logo.scale-125.png">
+      <PackagePath>Assets\Square44x44Logo.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2025-07-01T19:51:06.222</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\14929\Documents\code\UWP\XboxGameBarSamples\Samples\WidgetSampleCS\Assets\Square44x44Logo.scale-150.png">
+      <PackagePath>Assets\Square44x44Logo.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2025-07-01T19:51:06.223</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\14929\Documents\code\UWP\XboxGameBarSamples\Samples\WidgetSampleCS\Assets\Square44x44Logo.scale-400.png">
+      <PackagePath>Assets\Square44x44Logo.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2025-07-01T19:51:06.223</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\14929\Documents\code\UWP\XboxGameBarSamples\Samples\WidgetSampleCS\Assets\Square44x44Logo.targetsize-16.png">
+      <PackagePath>Assets\Square44x44Logo.targetsize-16.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2025-07-01T19:51:06.224</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\14929\Documents\code\UWP\XboxGameBarSamples\Samples\WidgetSampleCS\Assets\Square44x44Logo.targetsize-24.png">
+      <PackagePath>Assets\Square44x44Logo.targetsize-24.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2025-07-01T19:51:06.225</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\14929\Documents\code\UWP\XboxGameBarSamples\Samples\WidgetSampleCS\Assets\Square44x44Logo.targetsize-256.png">
+      <PackagePath>Assets\Square44x44Logo.targetsize-256.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2025-07-01T19:51:06.226</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\14929\Documents\code\UWP\XboxGameBarSamples\Samples\WidgetSampleCS\Assets\Square44x44Logo.targetsize-32.png">
+      <PackagePath>Assets\Square44x44Logo.targetsize-32.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2025-07-01T19:51:06.226</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\14929\Documents\code\UWP\XboxGameBarSamples\Samples\WidgetSampleCS\Assets\Square44x44Logo.targetsize-48.png">
+      <PackagePath>Assets\Square44x44Logo.targetsize-48.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2025-07-01T19:51:06.227</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\14929\Documents\code\UWP\XboxGameBarSamples\Samples\WidgetSampleCS\Assets\StoreLogo.scale-100.png">
+      <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2025-07-01T19:51:06.227</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\14929\Documents\code\UWP\XboxGameBarSamples\Samples\WidgetSampleCS\Assets\StoreLogo.scale-125.png">
+      <PackagePath>Assets\StoreLogo.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2025-07-01T19:51:06.228</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\14929\Documents\code\UWP\XboxGameBarSamples\Samples\WidgetSampleCS\Assets\StoreLogo.scale-150.png">
+      <PackagePath>Assets\StoreLogo.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2025-07-01T19:51:06.228</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\14929\Documents\code\UWP\XboxGameBarSamples\Samples\WidgetSampleCS\Assets\StoreLogo.scale-200.png">
+      <PackagePath>Assets\StoreLogo.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2025-07-01T19:51:06.229</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\14929\Documents\code\UWP\XboxGameBarSamples\Samples\WidgetSampleCS\Assets\StoreLogo.scale-400.png">
+      <PackagePath>Assets\StoreLogo.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2025-07-01T19:51:06.229</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\14929\Documents\code\UWP\XboxGameBarSamples\Samples\WidgetSampleCS\Assets\Wide310x150Logo.scale-100.png">
+      <PackagePath>Assets\Wide310x150Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2025-07-01T19:51:06.230</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\14929\Documents\code\UWP\XboxGameBarSamples\Samples\WidgetSampleCS\Assets\Wide310x150Logo.scale-125.png">
+      <PackagePath>Assets\Wide310x150Logo.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2025-07-01T19:51:06.230</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\14929\Documents\code\UWP\XboxGameBarSamples\Samples\WidgetSampleCS\Assets\Wide310x150Logo.scale-150.png">
+      <PackagePath>Assets\Wide310x150Logo.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2025-07-01T19:51:06.231</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\14929\Documents\code\UWP\XboxGameBarSamples\Samples\WidgetSampleCS\Assets\Wide310x150Logo.scale-400.png">
+      <PackagePath>Assets\Wide310x150Logo.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2025-07-01T19:51:06.232</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\14929\Documents\code\UWP\XboxGameBarSamples\Samples\WidgetSampleCS\Assets\LockScreenLogo.scale-200.png">
+      <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
+      <Modified>2025-07-01T19:51:06.211</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\14929\Documents\code\UWP\XboxGameBarSamples\Samples\WidgetSampleCS\Assets\SplashScreen.scale-200.png">
+      <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2025-07-01T19:51:06.216</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\14929\Documents\code\UWP\XboxGameBarSamples\Samples\WidgetSampleCS\Assets\Square150x150Logo.scale-200.png">
+      <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2025-07-01T19:51:06.218</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\14929\Documents\code\UWP\XboxGameBarSamples\Samples\WidgetSampleCS\Assets\Square44x44Logo.scale-200.png">
+      <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2025-07-01T19:51:06.223</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\14929\Documents\code\UWP\XboxGameBarSamples\Samples\WidgetSampleCS\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+      <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2025-07-01T19:51:06.225</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\14929\Documents\code\UWP\XboxGameBarSamples\Samples\WidgetSampleCS\Assets\Wide310x150Logo.scale-200.png">
+      <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2025-07-01T19:51:06.231</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\14929\Documents\code\UWP\XboxGameBarSamples\Samples\WidgetSampleCS\Properties\Default.rd.xml">
+      <PackagePath>Properties\Default.rd.xml</PackagePath>
+      <Modified>2025-07-01T19:51:06.234</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\14929\Documents\code\UWP\XboxGameBarSamples\Samples\WidgetSampleCS\bin\x64\Debug\HeartRateWidget.xr.xml">
+      <PackagePath>HeartRateWidget.xr.xml</PackagePath>
+      <Modified>2025-07-03T11:05:44.429</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\14929\Documents\code\UWP\XboxGameBarSamples\Samples\WidgetSampleCS\bin\x64\Debug\App.xbf">
+      <PackagePath>App.xbf</PackagePath>
+      <Modified>2025-07-03T11:08:09.592</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\14929\Documents\code\UWP\XboxGameBarSamples\Samples\WidgetSampleCS\bin\x64\Debug\Widget.xbf">
+      <PackagePath>Widget.xbf</PackagePath>
+      <Modified>2025-07-03T11:08:09.592</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.UniversalCRT.Debug\10.0.18362.0\\redist\Debug\X64\ucrtbased.dll">
+      <PackagePath>ucrtbased.dll</PackagePath>
+      <Modified>2019-03-18T11:50:32.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.18362.0\Windows.winmd">
+      <PackagePath>WinMetadata\Windows.winmd</PackagePath>
+      <Modified>2019-03-18T09:33:42.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\14929\.nuget\packages\microsoft.gaming.xboxgamebar\7.3.2506120\buildTransitive\..\private\Microsoft.Gaming.XboxGameBar.Private.winmd">
+      <PackagePath>Microsoft.Gaming.XboxGameBar.Private.winmd</PackagePath>
+      <Modified>2025-06-12T14:34:54.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\14929\Documents\code\UWP\XboxGameBarSamples\Samples\WidgetSampleCS\bin\x64\Debug\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+      <Modified>2025-07-03T11:05:44.863</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\14929\Documents\code\UWP\XboxGameBarSamples\Samples\WidgetSampleCS\bin\x64\Debug\Core\HeartRateWidget.exe">
+      <PackagePath>HeartRateWidget.exe</PackagePath>
+      <Modified>2025-07-03T11:08:10.084</Modified>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.net.uwpcoreruntimesdk\2.2.14\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx">
+      <Name>Microsoft.NET.CoreRuntime.2.2</Name>
+      <Version>2.2.31331.1</Version>
+      <Architecture>x86</Architecture>
+      <FrameworkIdentity>Name = Microsoft.NET.CoreRuntime.2.2, MinVersion = 2.2.31331.1, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.net.uwpcoreruntimesdk\2.2.14\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx</AppxLocation>
+      <MoreInfo>
+      </MoreInfo>
+    </ResolvedSDKReference>
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x64.microsoft.net.uwpcoreruntimesdk\2.2.14\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx">
+      <Name>Microsoft.NET.CoreRuntime.2.2</Name>
+      <Version>2.2.31331.1</Version>
+      <Architecture>x64</Architecture>
+      <FrameworkIdentity>Name = Microsoft.NET.CoreRuntime.2.2, MinVersion = 2.2.31331.1, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x64.microsoft.net.uwpcoreruntimesdk\2.2.14\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx</AppxLocation>
+      <MoreInfo>
+      </MoreInfo>
+    </ResolvedSDKReference>
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-arm.microsoft.net.uwpcoreruntimesdk\2.2.14\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx">
+      <Name>Microsoft.NET.CoreRuntime.2.2</Name>
+      <Version>2.2.31331.1</Version>
+      <Architecture>arm</Architecture>
+      <FrameworkIdentity>Name = Microsoft.NET.CoreRuntime.2.2, MinVersion = 2.2.31331.1, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-arm.microsoft.net.uwpcoreruntimesdk\2.2.14\build\..\tools\Appx\Microsoft.NET.CoreRuntime.2.2.appx</AppxLocation>
+      <MoreInfo>
+      </MoreInfo>
+    </ResolvedSDKReference>
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.net.uwpcoreruntimesdk\2.2.14\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx">
+      <Name>Microsoft.NET.CoreFramework.Debug.2.2</Name>
+      <Version>2.2.31327.1</Version>
+      <Architecture>x86</Architecture>
+      <FrameworkIdentity>Name = Microsoft.NET.CoreFramework.Debug.2.2, MinVersion = 2.2.31327.1, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.net.uwpcoreruntimesdk\2.2.14\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx</AppxLocation>
+      <MoreInfo>
+      </MoreInfo>
+    </ResolvedSDKReference>
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x64.microsoft.net.uwpcoreruntimesdk\2.2.14\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx">
+      <Name>Microsoft.NET.CoreFramework.Debug.2.2</Name>
+      <Version>2.2.31327.1</Version>
+      <Architecture>x64</Architecture>
+      <FrameworkIdentity>Name = Microsoft.NET.CoreFramework.Debug.2.2, MinVersion = 2.2.31327.1, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x64.microsoft.net.uwpcoreruntimesdk\2.2.14\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx</AppxLocation>
+      <MoreInfo>
+      </MoreInfo>
+    </ResolvedSDKReference>
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-arm.microsoft.net.uwpcoreruntimesdk\2.2.14\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx">
+      <Name>Microsoft.NET.CoreFramework.Debug.2.2</Name>
+      <Version>2.2.31327.1</Version>
+      <Architecture>arm</Architecture>
+      <FrameworkIdentity>Name = Microsoft.NET.CoreFramework.Debug.2.2, MinVersion = 2.2.31327.1, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-arm.microsoft.net.uwpcoreruntimesdk\2.2.14\build\..\tools\Appx\Microsoft.NET.CoreFramework.Debug.2.2.appx</AppxLocation>
+      <MoreInfo>
+      </MoreInfo>
+    </ResolvedSDKReference>
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\">
+      <Name>Microsoft.VCLibs.140.00.Debug</Name>
+      <Version>14.0.33519.0</Version>
+      <Architecture>ARM</Architecture>
+      <FrameworkIdentity>Name = Microsoft.VCLibs.140.00.Debug, MinVersion = 14.0.33519.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\.\AppX\Debug\ARM\Microsoft.VCLibs.ARM.Debug.14.00.appx</AppxLocation>
+      <MoreInfo>
+      </MoreInfo>
+    </ResolvedSDKReference>
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\">
+      <Name>Microsoft.VCLibs.140.00.Debug</Name>
+      <Version>14.0.33519.0</Version>
+      <Architecture>ARM64</Architecture>
+      <FrameworkIdentity>Name = Microsoft.VCLibs.140.00.Debug, MinVersion = 14.0.33519.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\.\AppX\Debug\ARM64\Microsoft.VCLibs.ARM64.Debug.14.00.appx</AppxLocation>
+      <MoreInfo>
+      </MoreInfo>
+    </ResolvedSDKReference>
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\">
+      <Name>Microsoft.VCLibs.140.00.Debug</Name>
+      <Version>14.0.33519.0</Version>
+      <Architecture>x64</Architecture>
+      <FrameworkIdentity>Name = Microsoft.VCLibs.140.00.Debug, MinVersion = 14.0.33519.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\.\AppX\Debug\x64\Microsoft.VCLibs.x64.Debug.14.00.appx</AppxLocation>
+      <MoreInfo>
+      </MoreInfo>
+    </ResolvedSDKReference>
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\">
+      <Name>Microsoft.VCLibs.140.00.Debug</Name>
+      <Version>14.0.33519.0</Version>
+      <Architecture>x86</Architecture>
+      <FrameworkIdentity>Name = Microsoft.VCLibs.140.00.Debug, MinVersion = 14.0.33519.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\.\AppX\Debug\x86\Microsoft.VCLibs.x86.Debug.14.00.appx</AppxLocation>
+      <MoreInfo>
+      </MoreInfo>
+    </ResolvedSDKReference>
+  </ItemGroup>
+</Project>

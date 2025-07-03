@@ -1,0 +1,1356 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<PriInfo>
+	<ResourceMap name="HeartRateWidget" version="1.0" primary="true">
+		<Qualifiers>
+			<AlternateForm>UNPLATED</AlternateForm>
+			<Scale>200</Scale>
+			<TargetSize>256,16,24,32,48</TargetSize>
+		</Qualifiers>
+		<ResourceMapSubtree name="Files">
+			<NamedResource name="App.xbf" uri="ms-resource://HeartRateWidget/Files/App.xbf">
+				<Candidate type="EmbeddedData">
+					<Base64Value>[Embedded Binary Data]</Base64Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="HeartRateWidget.xr.xml" uri="ms-resource://HeartRateWidget/Files/HeartRateWidget.xr.xml">
+				<Candidate type="Path">
+					<Value>HeartRateWidget.xr.xml</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="Widget.xbf" uri="ms-resource://HeartRateWidget/Files/Widget.xbf">
+				<Candidate type="EmbeddedData">
+					<Base64Value>[Embedded Binary Data]</Base64Value>
+				</Candidate>
+			</NamedResource>
+			<ResourceMapSubtree name="Assets">
+				<NamedResource name="LargeTile.png" uri="ms-resource://HeartRateWidget/Files/Assets/LargeTile.png">
+					<Candidate qualifiers="Scale-200" isDefault="true" type="Path">
+						<Value>Assets\LargeTile.scale-200.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="LockScreenLogo.png" uri="ms-resource://HeartRateWidget/Files/Assets/LockScreenLogo.png">
+					<Candidate qualifiers="Scale-200" isDefault="true" type="Path">
+						<Value>Assets\LockScreenLogo.scale-200.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="SmallTile.png" uri="ms-resource://HeartRateWidget/Files/Assets/SmallTile.png">
+					<Candidate qualifiers="Scale-200" isDefault="true" type="Path">
+						<Value>Assets\SmallTile.scale-200.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="SplashScreen.png" uri="ms-resource://HeartRateWidget/Files/Assets/SplashScreen.png">
+					<Candidate qualifiers="Scale-200" isDefault="true" type="Path">
+						<Value>Assets\SplashScreen.scale-200.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="Square150x150Logo.png" uri="ms-resource://HeartRateWidget/Files/Assets/Square150x150Logo.png">
+					<Candidate qualifiers="Scale-200" isDefault="true" type="Path">
+						<Value>Assets\Square150x150Logo.scale-200.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="Square44x44Logo.png" uri="ms-resource://HeartRateWidget/Files/Assets/Square44x44Logo.png">
+					<Candidate qualifiers="TargetSize-48, AlternateForm-UNPLATED" type="Path">
+						<Value>Assets\Square44x44Logo.altform-unplated_targetsize-48.png</Value>
+					</Candidate>
+					<Candidate qualifiers="TargetSize-48" isDefault="true" type="Path">
+						<Value>Assets\Square44x44Logo.targetsize-48.png</Value>
+					</Candidate>
+					<Candidate qualifiers="TargetSize-32, AlternateForm-UNPLATED" type="Path">
+						<Value>Assets\Square44x44Logo.altform-unplated_targetsize-32.png</Value>
+					</Candidate>
+					<Candidate qualifiers="TargetSize-32" isDefault="true" type="Path">
+						<Value>Assets\Square44x44Logo.targetsize-32.png</Value>
+					</Candidate>
+					<Candidate qualifiers="TargetSize-256, AlternateForm-UNPLATED" type="Path">
+						<Value>Assets\Square44x44Logo.altform-unplated_targetsize-256.png</Value>
+					</Candidate>
+					<Candidate qualifiers="TargetSize-256" isDefault="true" type="Path">
+						<Value>Assets\Square44x44Logo.targetsize-256.png</Value>
+					</Candidate>
+					<Candidate qualifiers="TargetSize-24, AlternateForm-UNPLATED" type="Path">
+						<Value>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</Value>
+					</Candidate>
+					<Candidate qualifiers="TargetSize-24" isDefault="true" type="Path">
+						<Value>Assets\Square44x44Logo.targetsize-24.png</Value>
+					</Candidate>
+					<Candidate qualifiers="TargetSize-16, AlternateForm-UNPLATED" type="Path">
+						<Value>Assets\Square44x44Logo.altform-unplated_targetsize-16.png</Value>
+					</Candidate>
+					<Candidate qualifiers="TargetSize-16" isDefault="true" type="Path">
+						<Value>Assets\Square44x44Logo.targetsize-16.png</Value>
+					</Candidate>
+					<Candidate qualifiers="Scale-200" isDefault="true" type="Path">
+						<Value>Assets\Square44x44Logo.scale-200.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="StoreLogo.png" uri="ms-resource://HeartRateWidget/Files/Assets/StoreLogo.png">
+					<Candidate qualifiers="Scale-200" isDefault="true" type="Path">
+						<Value>Assets\StoreLogo.scale-200.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="Wide310x150Logo.png" uri="ms-resource://HeartRateWidget/Files/Assets/Wide310x150Logo.png">
+					<Candidate qualifiers="Scale-200" isDefault="true" type="Path">
+						<Value>Assets\Wide310x150Logo.scale-200.png</Value>
+					</Candidate>
+				</NamedResource>
+			</ResourceMapSubtree>
+			<ResourceMapSubtree name="Properties">
+				<NamedResource name="Default.rd.xml" uri="ms-resource://HeartRateWidget/Files/Properties/Default.rd.xml">
+					<Candidate type="Path">
+						<Value>Properties\Default.rd.xml</Value>
+					</Candidate>
+				</NamedResource>
+			</ResourceMapSubtree>
+			<ResourceMapSubtree name="WinMetadata">
+				<NamedResource name="Windows.winmd" uri="ms-resource://HeartRateWidget/Files/WinMetadata/Windows.winmd">
+					<Candidate type="Path">
+						<Value>WinMetadata\Windows.winmd</Value>
+					</Candidate>
+				</NamedResource>
+			</ResourceMapSubtree>
+		</ResourceMapSubtree>
+		<ResourceMapSubtree name="FxResources.System.IO.Pipelines.SR">
+			<NamedResource name="AdvanceToInvalidCursor" uri="ms-resource://HeartRateWidget/FxResources.System.IO.Pipelines.SR/AdvanceToInvalidCursor">
+				<Candidate type="String">
+					<Value>The PipeReader has already advanced past the provided position.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="ArgumentOutOfRange_NeedPosNum" uri="ms-resource://HeartRateWidget/FxResources.System.IO.Pipelines.SR/ArgumentOutOfRange_NeedPosNum">
+				<Candidate type="String">
+					<Value>Positive number required.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="ConcurrentOperationsNotSupported" uri="ms-resource://HeartRateWidget/FxResources.System.IO.Pipelines.SR/ConcurrentOperationsNotSupported">
+				<Candidate type="String">
+					<Value>Concurrent reads or writes are not supported.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="FlushCanceledOnPipeWriter" uri="ms-resource://HeartRateWidget/FxResources.System.IO.Pipelines.SR/FlushCanceledOnPipeWriter">
+				<Candidate type="String">
+					<Value>Flush was canceled on underlying PipeWriter.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="GetResultBeforeCompleted" uri="ms-resource://HeartRateWidget/FxResources.System.IO.Pipelines.SR/GetResultBeforeCompleted">
+				<Candidate type="String">
+					<Value>Can't GetResult unless awaiter is completed.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="InvalidExaminedOrConsumedPosition" uri="ms-resource://HeartRateWidget/FxResources.System.IO.Pipelines.SR/InvalidExaminedOrConsumedPosition">
+				<Candidate type="String">
+					<Value>The examined position must be greater than or equal to the consumed position.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="InvalidExaminedPosition" uri="ms-resource://HeartRateWidget/FxResources.System.IO.Pipelines.SR/InvalidExaminedPosition">
+				<Candidate type="String">
+					<Value>The examined position cannot be less than the previously examined position.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="InvalidZeroByteRead" uri="ms-resource://HeartRateWidget/FxResources.System.IO.Pipelines.SR/InvalidZeroByteRead">
+				<Candidate type="String">
+					<Value>The PipeReader returned 0 bytes when the ReadResult was not completed or canceled.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="NoReadingOperationToComplete" uri="ms-resource://HeartRateWidget/FxResources.System.IO.Pipelines.SR/NoReadingOperationToComplete">
+				<Candidate type="String">
+					<Value>No reading operation to complete.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="NotSupported_UnreadableStream" uri="ms-resource://HeartRateWidget/FxResources.System.IO.Pipelines.SR/NotSupported_UnreadableStream">
+				<Candidate type="String">
+					<Value>Stream does not support reading.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="NotSupported_UnwritableStream" uri="ms-resource://HeartRateWidget/FxResources.System.IO.Pipelines.SR/NotSupported_UnwritableStream">
+				<Candidate type="String">
+					<Value>Stream does not support writing.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="ObjectDisposed_StreamClosed" uri="ms-resource://HeartRateWidget/FxResources.System.IO.Pipelines.SR/ObjectDisposed_StreamClosed">
+				<Candidate type="String">
+					<Value>Cannot access a closed stream.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="ReadCanceledOnPipeReader" uri="ms-resource://HeartRateWidget/FxResources.System.IO.Pipelines.SR/ReadCanceledOnPipeReader">
+				<Candidate type="String">
+					<Value>Read was canceled on underlying PipeReader.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="ReaderAndWriterHasToBeCompleted" uri="ms-resource://HeartRateWidget/FxResources.System.IO.Pipelines.SR/ReaderAndWriterHasToBeCompleted">
+				<Candidate type="String">
+					<Value>Both reader and writer has to be completed to be able to reset the pipe.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="ReadingAfterCompleted" uri="ms-resource://HeartRateWidget/FxResources.System.IO.Pipelines.SR/ReadingAfterCompleted">
+				<Candidate type="String">
+					<Value>Reading is not allowed after reader was completed.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="ReadingIsInProgress" uri="ms-resource://HeartRateWidget/FxResources.System.IO.Pipelines.SR/ReadingIsInProgress">
+				<Candidate type="String">
+					<Value>Reading is already in progress.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="UnflushedBytesNotSupported" uri="ms-resource://HeartRateWidget/FxResources.System.IO.Pipelines.SR/UnflushedBytesNotSupported">
+				<Candidate type="String">
+					<Value>UnflushedBytes is not supported.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="WritingAfterCompleted" uri="ms-resource://HeartRateWidget/FxResources.System.IO.Pipelines.SR/WritingAfterCompleted">
+				<Candidate type="String">
+					<Value>Writing is not allowed after writer was completed.</Value>
+				</Candidate>
+			</NamedResource>
+		</ResourceMapSubtree>
+		<ResourceMapSubtree name="FxResources.System.Text.Encodings.Web.SR">
+			<NamedResource name="TextEncoderDoesNotImplementMaxOutputCharsPerInputChar" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Encodings.Web.SR/TextEncoderDoesNotImplementMaxOutputCharsPerInputChar">
+				<Candidate type="String">
+					<Value>TextEncoder does not implement MaxOutputCharsPerInputChar correctly.</Value>
+				</Candidate>
+			</NamedResource>
+		</ResourceMapSubtree>
+		<ResourceMapSubtree name="FxResources.System.Text.Json.SR">
+			<NamedResource name="AmbiguousMetadataForType" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/AmbiguousMetadataForType">
+				<Candidate type="String">
+					<Value>Ambiguous matches when resolving JsonTypeInfo metadata for type '{0}': '{1}', '{2}'. Consider either explicitly providing metadata for the type or removing one of its interface implementations.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="ArgumentOutOfRange_Generic_MustBeGreaterOrEqual" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/ArgumentOutOfRange_Generic_MustBeGreaterOrEqual">
+				<Candidate type="String">
+					<Value>{0} ('{1}') must be greater than or equal to '{2}'.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="ArgumentOutOfRange_Generic_MustBeLessOrEqual" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/ArgumentOutOfRange_Generic_MustBeLessOrEqual">
+				<Candidate type="String">
+					<Value>{0} ('{1}') must be less than or equal to '{2}'.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="ArgumentOutOfRange_Generic_MustBeNonNegative" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/ArgumentOutOfRange_Generic_MustBeNonNegative">
+				<Candidate type="String">
+					<Value>{0} ('{1}') must be a non-negative value.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="Argument_AddingDuplicate" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/Argument_AddingDuplicate">
+				<Candidate type="String">
+					<Value>An item with the same key has already been added. Key: {0}</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="Argument_IncompatibleArrayType" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/Argument_IncompatibleArrayType">
+				<Candidate type="String">
+					<Value>Target array type is not compatible with the type of items in the collection.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="Arg_ArrayPlusOffTooSmall" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/Arg_ArrayPlusOffTooSmall">
+				<Candidate type="String">
+					<Value>Destination array is not long enough to copy all the items in the collection. Check array index and length.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="Arg_HTCapacityOverflow" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/Arg_HTCapacityOverflow">
+				<Candidate type="String">
+					<Value>Hashtable's capacity overflowed and went negative. Check load factor, capacity and the current size of the table.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="Arg_KeyNotFoundWithKey" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/Arg_KeyNotFoundWithKey">
+				<Candidate type="String">
+					<Value>The given key '{0}' was not present in the dictionary.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="Arg_NonZeroLowerBound" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/Arg_NonZeroLowerBound">
+				<Candidate type="String">
+					<Value>The lower bound of target array must be zero.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="Arg_RankMultiDimNotSupported" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/Arg_RankMultiDimNotSupported">
+				<Candidate type="String">
+					<Value>Only single dimensional arrays are supported for the requested action.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="Arg_WrongType" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/Arg_WrongType">
+				<Candidate type="String">
+					<Value>The value '{0}' is not of type '{1}' and cannot be used in this generic collection.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="ArrayDepthTooLarge" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/ArrayDepthTooLarge">
+				<Candidate type="String">
+					<Value>The maximum configured depth of {0} has been exceeded. Cannot read next JSON array.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="ArrayIndexNegative" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/ArrayIndexNegative">
+				<Candidate type="String">
+					<Value>Number was less than 0.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="ArrayTooSmall" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/ArrayTooSmall">
+				<Candidate type="String">
+					<Value>Destination array was not long enough.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="BufferMaximumSizeExceeded" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/BufferMaximumSizeExceeded">
+				<Candidate type="String">
+					<Value>Cannot allocate a buffer of size {0}.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="BufferWriterAdvancedTooFar" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/BufferWriterAdvancedTooFar">
+				<Candidate type="String">
+					<Value>Cannot advance past the end of the buffer, which has a size of {0}.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="CallFlushToAvoidDataLoss" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/CallFlushToAvoidDataLoss">
+				<Candidate type="String">
+					<Value>The JSON writer needs to be flushed before getting the current state. There are {0} bytes that have not been committed to the output.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="CannotDecodeInvalidBase64" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/CannotDecodeInvalidBase64">
+				<Candidate type="String">
+					<Value>Cannot decode JSON text that is not encoded as valid Base64 to bytes.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="CannotEncodeInvalidUTF16" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/CannotEncodeInvalidUTF16">
+				<Candidate type="String">
+					<Value>Cannot encode invalid UTF-16 text as JSON. Invalid surrogate value: '{0}'.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="CannotEncodeInvalidUTF8" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/CannotEncodeInvalidUTF8">
+				<Candidate type="String">
+					<Value>Cannot encode invalid UTF-8 text as JSON. Invalid input: '{0}'.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="CannotPopulateCollection" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/CannotPopulateCollection">
+				<Candidate type="String">
+					<Value>The collection type '{0}' is abstract, an interface, or is read only, and could not be instantiated and populated.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="CannotReadIncompleteUTF16" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/CannotReadIncompleteUTF16">
+				<Candidate type="String">
+					<Value>Cannot read incomplete UTF-16 JSON text as string with missing low surrogate.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="CannotReadInvalidUTF16" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/CannotReadInvalidUTF16">
+				<Candidate type="String">
+					<Value>Cannot read invalid UTF-16 JSON text as string. Invalid surrogate value: '{0}'.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="CannotSerializeInvalidMember" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/CannotSerializeInvalidMember">
+				<Candidate type="String">
+					<Value>The type '{0}' of property '{1}' on type '{2}' is invalid for serialization or deserialization because it is a pointer type, is a ref struct, or contains generic parameters that have not been replaced by specific types.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="CannotSerializeInvalidType" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/CannotSerializeInvalidType">
+				<Candidate type="String">
+					<Value>The type '{0}' is invalid for serialization or deserialization because it is a pointer type, is a ref struct, or contains generic parameters that have not been replaced by specific types.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="CannotSkip" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/CannotSkip">
+				<Candidate type="String">
+					<Value>Cannot skip tokens on partial JSON. Either get the whole payload and create a Utf8JsonReader instance where isFinalBlock is true or call TrySkip.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="CannotStartObjectArrayAfterPrimitiveOrClose" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/CannotStartObjectArrayAfterPrimitiveOrClose">
+				<Candidate type="String">
+					<Value>Cannot write the start of an object/array after a single JSON value or outside of an existing closed object/array. Current token type is '{0}'.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="CannotStartObjectArrayWithoutProperty" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/CannotStartObjectArrayWithoutProperty">
+				<Candidate type="String">
+					<Value>Cannot write the start of an object or array without a property name. Current token type is '{0}'.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="CannotTranscodeInvalidUtf16" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/CannotTranscodeInvalidUtf16">
+				<Candidate type="String">
+					<Value>Cannot transcode invalid UTF-16 string to UTF-8 JSON text.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="CannotTranscodeInvalidUtf8" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/CannotTranscodeInvalidUtf8">
+				<Candidate type="String">
+					<Value>Cannot transcode invalid UTF-8 JSON text to UTF-16 string.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="CannotWriteCommentWithEmbeddedDelimiter" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/CannotWriteCommentWithEmbeddedDelimiter">
+				<Candidate type="String">
+					<Value>Cannot write a comment value which contains the end of comment delimiter.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="CannotWriteEndAfterProperty" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/CannotWriteEndAfterProperty">
+				<Candidate type="String">
+					<Value>'{0}' is invalid following a property name.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="CannotWritePropertyAfterProperty" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/CannotWritePropertyAfterProperty">
+				<Candidate type="String">
+					<Value>Cannot write a JSON property name following another property name. A JSON value is missing.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="CannotWritePropertyWithinArray" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/CannotWritePropertyWithinArray">
+				<Candidate type="String">
+					<Value>Cannot write a JSON property within an array or as the first JSON token. Current token type is '{0}'.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="CannotWriteValueAfterPrimitiveOrClose" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/CannotWriteValueAfterPrimitiveOrClose">
+				<Candidate type="String">
+					<Value>Cannot write a JSON value after a single JSON value or outside of an existing closed object/array. Current token type is '{0}'.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="CannotWriteValueWithinObject" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/CannotWriteValueWithinObject">
+				<Candidate type="String">
+					<Value>Cannot write a JSON value within an object without a property name. Current token type is '{0}'.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="CollectionIsReadOnly" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/CollectionIsReadOnly">
+				<Candidate type="String">
+					<Value>Collection is read-only.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="CommentHandlingMustBeValid" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/CommentHandlingMustBeValid">
+				<Candidate type="String">
+					<Value>The JsonCommentHandling enum must be set to one of the supported values.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="ConstructorContainsNullParameterNames" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/ConstructorContainsNullParameterNames">
+				<Candidate type="String">
+					<Value>The deserialization constructor for type '{0}' contains parameters with null names. This might happen because the parameter names have been trimmed by ILLink. Consider using the source generated serializer instead.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="ConstructorParameterDisallowNull" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/ConstructorParameterDisallowNull">
+				<Candidate type="String">
+					<Value>The constructor parameter '{0}' on type '{1}' doesn't allow null values. Consider updating its nullability annotation.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="ConstructorParamIncompleteBinding" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/ConstructorParamIncompleteBinding">
+				<Candidate type="String">
+					<Value>Each parameter in the deserialization constructor on type '{0}' must bind to an object property or field on deserialization. Each parameter name must match with a property or field on the object. Fields are only considered when 'JsonSerializerOptions.IncludeFields' is enabled. The match can be case-insensitive.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="ConverterCanConvertMultipleTypes" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/ConverterCanConvertMultipleTypes">
+				<Candidate type="String">
+					<Value>The converter '{0}' handles type '{1}' but is being asked to convert type '{2}'. Either create a separate converter for type '{2}' or change the converter's 'CanConvert' method to only return 'true' for a single type.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="ConverterForPropertyMustBeValid" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/ConverterForPropertyMustBeValid">
+				<Candidate type="String">
+					<Value>The generic type of the converter for property '{0}.{1}' must match with the specified converter type '{2}'. The converter must not be 'null'.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="CreateObjectConverterNotCompatible" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/CreateObjectConverterNotCompatible">
+				<Candidate type="String">
+					<Value>The converter for type '{0}' does not support setting 'CreateObject' delegates.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="DefaultIgnoreConditionAlreadySpecified" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/DefaultIgnoreConditionAlreadySpecified">
+				<Candidate type="String">
+					<Value>'IgnoreNullValues' and 'DefaultIgnoreCondition' cannot both be set to non-default values.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="DefaultIgnoreConditionInvalid" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/DefaultIgnoreConditionInvalid">
+				<Candidate type="String">
+					<Value>The value cannot be 'JsonIgnoreCondition.Always'.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="DefaultTypeInfoResolverImmutable" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/DefaultTypeInfoResolverImmutable">
+				<Candidate type="String">
+					<Value>Cannot add callbacks to the 'Modifiers' property after the resolver has been used for the first time.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="DepthTooLarge" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/DepthTooLarge">
+				<Candidate type="String">
+					<Value>CurrentDepth ({0}) is equal to or larger than the maximum allowed depth of {1}. Cannot write the next JSON object or array.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="DeserializationMustSpecifyTypeDiscriminator" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/DeserializationMustSpecifyTypeDiscriminator">
+				<Candidate type="String">
+					<Value>The JSON payload for polymorphic interface or abstract type '{0}' must specify a type discriminator.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="DeserializeInterfaceOrAbstractType" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/DeserializeInterfaceOrAbstractType">
+				<Candidate type="String">
+					<Value>Deserialization of interface or abstract types is not supported. Type '{0}'.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="DeserializeNoConstructor" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/DeserializeNoConstructor">
+				<Candidate type="String">
+					<Value>Deserialization of types without a parameterless constructor, a singular parameterized constructor, or a parameterized constructor annotated with '{0}' is not supported. Type '{1}'.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="DeserializeUnableToAssignNull" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/DeserializeUnableToAssignNull">
+				<Candidate type="String">
+					<Value>Unable to assign 'null' to the property or field of type '{0}'.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="DeserializeUnableToAssignValue" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/DeserializeUnableToAssignValue">
+				<Candidate type="String">
+					<Value>Unable to cast object of type '{0}' to type '{1}'.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="DeserializeUnableToConvertValue" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/DeserializeUnableToConvertValue">
+				<Candidate type="String">
+					<Value>The JSON value could not be converted to {0}.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="DeserializeWrongType" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/DeserializeWrongType">
+				<Candidate type="String">
+					<Value>The specified type {0} must derive from the specific value's type {1}.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="DestinationTooShort" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/DestinationTooShort">
+				<Candidate type="String">
+					<Value>Destination is too short.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="DictionaryKeyTypeNotSupported" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/DictionaryKeyTypeNotSupported">
+				<Candidate type="String">
+					<Value>The type '{0}' is not a supported dictionary key using converter of type '{1}'. Custom converters can add support for dictionary key serialization by overriding the 'ReadAsPropertyName' and 'WriteAsPropertyName' methods.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="DuplicateMetadataProperty" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/DuplicateMetadataProperty">
+				<Candidate type="String">
+					<Value>Deserialized object contains a duplicate '{0}' metadata property.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="EmptyJsonIsInvalid" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/EmptyJsonIsInvalid">
+				<Candidate type="String">
+					<Value>Writing an empty JSON payload (excluding comments) is invalid.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="EndOfCommentNotFound" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/EndOfCommentNotFound">
+				<Candidate type="String">
+					<Value>Expected end of comment, but instead reached end of data.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="EndOfStringNotFound" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/EndOfStringNotFound">
+				<Candidate type="String">
+					<Value>Expected end of string, but instead reached end of data.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="ExpectedEndAfterSingleJson" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/ExpectedEndAfterSingleJson">
+				<Candidate type="String">
+					<Value>'{0}' is invalid after a single JSON value. Expected end of data.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="ExpectedEndOfDigitNotFound" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/ExpectedEndOfDigitNotFound">
+				<Candidate type="String">
+					<Value>'{0}' is an invalid end of a number. Expected a delimiter.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="ExpectedFalse" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/ExpectedFalse">
+				<Candidate type="String">
+					<Value>'{0}' is an invalid JSON literal. Expected the literal 'false'.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="ExpectedJsonTokens" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/ExpectedJsonTokens">
+				<Candidate type="String">
+					<Value>The input does not contain any JSON tokens. Expected the input to start with a valid JSON token, when isFinalBlock is true.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="ExpectedNextDigitEValueNotFound" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/ExpectedNextDigitEValueNotFound">
+				<Candidate type="String">
+					<Value>'{0}' is an invalid end of a number. Expected 'E' or 'e'.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="ExpectedNull" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/ExpectedNull">
+				<Candidate type="String">
+					<Value>'{0}' is an invalid JSON literal. Expected the literal 'null'.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="ExpectedOneCompleteToken" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/ExpectedOneCompleteToken">
+				<Candidate type="String">
+					<Value>The input does not contain any complete JSON tokens. Expected the input to have at least one valid, complete, JSON token.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="ExpectedSeparatorAfterPropertyNameNotFound" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/ExpectedSeparatorAfterPropertyNameNotFound">
+				<Candidate type="String">
+					<Value>'{0}' is invalid after a property name. Expected a ':'.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="ExpectedStartOfPropertyNotFound" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/ExpectedStartOfPropertyNotFound">
+				<Candidate type="String">
+					<Value>'{0}' is an invalid start of a property name. Expected a '"'.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="ExpectedStartOfPropertyOrValueAfterComment" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/ExpectedStartOfPropertyOrValueAfterComment">
+				<Candidate type="String">
+					<Value>'{0}' is an invalid start of a property name or value, after a comment.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="ExpectedStartOfPropertyOrValueNotFound" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/ExpectedStartOfPropertyOrValueNotFound">
+				<Candidate type="String">
+					<Value>Expected start of a property name or value, but instead reached end of data.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="ExpectedStartOfValueNotFound" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/ExpectedStartOfValueNotFound">
+				<Candidate type="String">
+					<Value>'{0}' is an invalid start of a value.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="ExpectedTrue" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/ExpectedTrue">
+				<Candidate type="String">
+					<Value>'{0}' is an invalid JSON literal. Expected the literal 'true'.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="ExpectedValueAfterPropertyNameNotFound" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/ExpectedValueAfterPropertyNameNotFound">
+				<Candidate type="String">
+					<Value>Expected a value, but instead reached end of data.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="ExtensionDataCannotBindToCtorParam" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/ExtensionDataCannotBindToCtorParam">
+				<Candidate type="String">
+					<Value>The extension data property '{0}' on type '{1}' cannot bind with a parameter in the deserialization constructor.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="ExtensionDataConflictsWithUnmappedMemberHandling" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/ExtensionDataConflictsWithUnmappedMemberHandling">
+				<Candidate type="String">
+					<Value>The type '{0}' is marked 'JsonUnmappedMemberHandling.Disallow' which conflicts with extension data property '{1}'.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="FailedToGetLargerSpan" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/FailedToGetLargerSpan">
+				<Candidate type="String">
+					<Value>The 'IBufferWriter' could not provide an output buffer that is large enough to continue writing.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="FieldCannotBeVirtual" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/FieldCannotBeVirtual">
+				<Candidate type="String">
+					<Value>A 'field' member cannot be 'virtual'. See arguments for the '{0}' and '{1}' parameters. </Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="FormatByte" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/FormatByte">
+				<Candidate type="String">
+					<Value>Either the JSON value is not in a supported format, or is out of bounds for an unsigned byte.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="FormatDecimal" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/FormatDecimal">
+				<Candidate type="String">
+					<Value>The JSON value is either too large or too small for a Decimal.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="FormatDouble" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/FormatDouble">
+				<Candidate type="String">
+					<Value>Either the JSON value is not in a supported format, or is out of bounds for a Double.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="FormatHalf" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/FormatHalf">
+				<Candidate type="String">
+					<Value>Either the JSON value is not in a supported format, or is out of bounds for a Half.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="FormatInt128" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/FormatInt128">
+				<Candidate type="String">
+					<Value>Either the JSON value is not in a supported format, or is out of bounds for an Int128.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="FormatInt16" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/FormatInt16">
+				<Candidate type="String">
+					<Value>Either the JSON value is not in a supported format, or is out of bounds for an Int16.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="FormatInt32" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/FormatInt32">
+				<Candidate type="String">
+					<Value>Either the JSON value is not in a supported format, or is out of bounds for an Int32.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="FormatInt64" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/FormatInt64">
+				<Candidate type="String">
+					<Value>Either the JSON value is not in a supported format, or is out of bounds for an Int64.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="FormatSByte" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/FormatSByte">
+				<Candidate type="String">
+					<Value>Either the JSON value is not in a supported format, or is out of bounds for a signed byte.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="FormatSingle" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/FormatSingle">
+				<Candidate type="String">
+					<Value>Either the JSON value is not in a supported format, or is out of bounds for a Single.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="FormatUInt128" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/FormatUInt128">
+				<Candidate type="String">
+					<Value>Either the JSON value is not in a supported format, or is out of bounds for an UInt128.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="FormatUInt16" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/FormatUInt16">
+				<Candidate type="String">
+					<Value>Either the JSON value is not in a supported format, or is out of bounds for a UInt16.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="FormatUInt32" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/FormatUInt32">
+				<Candidate type="String">
+					<Value>Either the JSON value is not in a supported format, or is out of bounds for a UInt32.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="FormatUInt64" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/FormatUInt64">
+				<Candidate type="String">
+					<Value>Either the JSON value is not in a supported format, or is out of bounds for a UInt64.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="FoundInvalidCharacter" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/FoundInvalidCharacter">
+				<Candidate type="String">
+					<Value>'{0}' is invalid after a value. Expected either ',', '}}', or ']'.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="FSharpDiscriminatedUnionsNotSupported" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/FSharpDiscriminatedUnionsNotSupported">
+				<Candidate type="String">
+					<Value>F# discriminated union serialization is not supported. Consider authoring a custom converter for the type.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="IgnoreConditionOnValueTypeInvalid" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/IgnoreConditionOnValueTypeInvalid">
+				<Candidate type="String">
+					<Value>The ignore condition 'JsonIgnoreCondition.WhenWritingNull' is not valid on value-type member '{0}' on type '{1}'. Consider using 'JsonIgnoreCondition.WhenWritingDefault'.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="InvalidCast" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/InvalidCast">
+				<Candidate type="String">
+					<Value>Cannot get the value of a token type '{0}' as a {1}.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="InvalidCharacterAfterEscapeWithinString" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/InvalidCharacterAfterEscapeWithinString">
+				<Candidate type="String">
+					<Value>'{0}' is an invalid escapable character within a JSON string. The string should be correctly escaped.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="InvalidCharacterAtStartOfComment" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/InvalidCharacterAtStartOfComment">
+				<Candidate type="String">
+					<Value>'{0}' is invalid after '/' at the beginning of the comment. Expected either '/' or '*'.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="InvalidCharacterWithinString" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/InvalidCharacterWithinString">
+				<Candidate type="String">
+					<Value>'{0}' is invalid within a JSON string. The string should be correctly escaped.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="InvalidComparison" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/InvalidComparison">
+				<Candidate type="String">
+					<Value>Cannot compare the value of a token type '{0}' to text.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="InvalidEndOfJsonNonPrimitive" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/InvalidEndOfJsonNonPrimitive">
+				<Candidate type="String">
+					<Value>'{0}' is an invalid token type for the end of the JSON payload. Expected either 'EndArray' or 'EndObject'.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="InvalidHexCharacterWithinString" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/InvalidHexCharacterWithinString">
+				<Candidate type="String">
+					<Value>'{0}' is not a hex digit following '\u' within a JSON string. The string should be correctly escaped.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="InvalidIndentCharacter" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/InvalidIndentCharacter">
+				<Candidate type="String">
+					<Value>Supported indentation characters are space and horizontal tab.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="InvalidIndentSize" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/InvalidIndentSize">
+				<Candidate type="String">
+					<Value>Indentation size must be between {0} and {1}.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="InvalidJsonTypeInfoOperationForKind" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/InvalidJsonTypeInfoOperationForKind">
+				<Candidate type="String">
+					<Value>Invalid JsonTypeInfo operation for JsonTypeInfoKind '{0}'.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="InvalidLeadingZeroInNumber" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/InvalidLeadingZeroInNumber">
+				<Candidate type="String">
+					<Value>Invalid leading zero before '{0}'.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="InvalidNewLine" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/InvalidNewLine">
+				<Candidate type="String">
+					<Value>New line can be only "\n" or "\r\n".</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="InvalidOperation_ConcurrentOperationsNotSupported" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/InvalidOperation_ConcurrentOperationsNotSupported">
+				<Candidate type="String">
+					<Value>Operations that change non-concurrent collections must have exclusive access. A concurrent update was performed on this collection and corrupted its state. The collection's state is no longer correct.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="InvalidOperation_EnumFailedVersion" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/InvalidOperation_EnumFailedVersion">
+				<Candidate type="String">
+					<Value>Collection was modified after the enumerator was instantiated.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="JsonDocumentDoesNotSupportComments" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/JsonDocumentDoesNotSupportComments">
+				<Candidate type="String">
+					<Value>Comments cannot be stored in a JsonDocument, only the Skip and Disallow comment handling modes are supported.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="JsonElementDeepEqualsInsufficientExecutionStack" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/JsonElementDeepEqualsInsufficientExecutionStack">
+				<Candidate type="String">
+					<Value>Insufficient stack to continue executing 'JsonElement.DeepEquals'. This can happen either because the 'JsonElement' values are too deep or 'DeepEquals' is being called too deep in the stack.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="JsonElementHasWrongType" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/JsonElementHasWrongType">
+				<Candidate type="String">
+					<Value>The requested operation requires an element of type '{0}', but the target element has type '{1}'.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="JsonIncludeOnInaccessibleProperty" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/JsonIncludeOnInaccessibleProperty">
+				<Candidate type="String">
+					<Value>The property '{0}' on type '{1}' which is annotated with 'JsonIncludeAttribute' is not accesible by the source generator.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="JsonNumberExponentTooLarge" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/JsonNumberExponentTooLarge">
+				<Candidate type="String">
+					<Value>The exponent value in the specified JSON number is too large.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="JsonPolymorphismOptionsAssociatedWithDifferentJsonTypeInfo" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/JsonPolymorphismOptionsAssociatedWithDifferentJsonTypeInfo">
+				<Candidate type="String">
+					<Value>Parameter already associated with a different JsonTypeInfo instance.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="JsonPropertyInfoBoundToDifferentParent" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/JsonPropertyInfoBoundToDifferentParent">
+				<Candidate type="String">
+					<Value>JsonPropertyInfo with name '{0}' for type '{1}' is already bound to different JsonTypeInfo.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="JsonPropertyRequiredAndExtensionData" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/JsonPropertyRequiredAndExtensionData">
+				<Candidate type="String">
+					<Value>JsonPropertyInfo '{0}' defined in type '{1}' is marked both as required and as an extension data property. This combination is not supported.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="JsonPropertyRequiredAndNotDeserializable" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/JsonPropertyRequiredAndNotDeserializable">
+				<Candidate type="String">
+					<Value>JsonPropertyInfo '{0}' defined in type '{1}' is marked required but does not specify a setter.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="JsonRequiredPropertiesMissing" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/JsonRequiredPropertiesMissing">
+				<Candidate type="String">
+					<Value>JSON deserialization for type '{0}' was missing required properties including: {1}.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="JsonSchemaExporter_DepthTooLarge" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/JsonSchemaExporter_DepthTooLarge">
+				<Candidate type="String">
+					<Value>The depth of the generated JSON schema exceeds the JsonSerializerOptions.MaxDepth setting.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="JsonSchemaExporter_ReferenceHandlerPreserve_NotSupported" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/JsonSchemaExporter_ReferenceHandlerPreserve_NotSupported">
+				<Candidate type="String">
+					<Value>JSON schema generation is not supported for contracts using ReferenceHandler.Preserve.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="JsonSerializerDoesNotSupportComments" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/JsonSerializerDoesNotSupportComments">
+				<Candidate type="String">
+					<Value>Comments cannot be stored when deserializing objects, only the Skip and Disallow comment handling modes are supported.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="JsonSerializerIsReflectionDisabled" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/JsonSerializerIsReflectionDisabled">
+				<Candidate type="String">
+					<Value>Reflection-based serialization has been disabled for this application. Either use the source generator APIs or explicitly configure the 'JsonSerializerOptions.TypeInfoResolver' property.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="JsonSerializerOptionsNoTypeInfoResolverSpecified" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/JsonSerializerOptionsNoTypeInfoResolverSpecified">
+				<Candidate type="String">
+					<Value>JsonSerializerOptions instance must specify a TypeInfoResolver setting before being marked as read-only.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="MaxDepthMustBePositive" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/MaxDepthMustBePositive">
+				<Candidate type="String">
+					<Value>Max depth must be positive.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="MetadataCannotParsePreservedObjectToImmutable" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/MetadataCannotParsePreservedObjectToImmutable">
+				<Candidate type="String">
+					<Value>Cannot parse a JSON object containing metadata properties like '$id' or '$type' into an array or immutable collection type. Type '{0}'.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="MetadataDuplicateIdFound" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/MetadataDuplicateIdFound">
+				<Candidate type="String">
+					<Value>The value of the '$id' metadata property '{0}' conflicts with an existing identifier.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="MetadataIdCannotBeCombinedWithRef" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/MetadataIdCannotBeCombinedWithRef">
+				<Candidate type="String">
+					<Value>The metadata property '$id' cannot be used together with '$ref' metadata properties.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="MetadataInvalidPropertyInArrayMetadata" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/MetadataInvalidPropertyInArrayMetadata">
+				<Candidate type="String">
+					<Value>A JSON object containing metadata for a nested array includes a non-metadata property '{0}'.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="MetadataInvalidPropertyWithLeadingDollarSign" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/MetadataInvalidPropertyWithLeadingDollarSign">
+				<Candidate type="String">
+					<Value>Properties that start with '$' are not allowed in types that support metadata. Either escape the character or disable reference preservation and polymorphic deserialization.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="MetadataInvalidReferenceToValueType" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/MetadataInvalidReferenceToValueType">
+				<Candidate type="String">
+					<Value>Invalid reference to value type '{0}'.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="MetadataInvalidTokenAfterValues" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/MetadataInvalidTokenAfterValues">
+				<Candidate type="String">
+					<Value>The '$values' metadata property must be a JSON array. Current token type is '{0}'.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="MetadataPreservedArrayFailed" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/MetadataPreservedArrayFailed">
+				<Candidate type="String">
+					<Value>Deserialization failed for one of these reasons:
+1. {0}
+2. {1}</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="MetadataReferenceCannotContainOtherProperties" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/MetadataReferenceCannotContainOtherProperties">
+				<Candidate type="String">
+					<Value>A JSON object that contains a '$ref' metadata property must not contain any other properties.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="MetadataReferenceNotFound" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/MetadataReferenceNotFound">
+				<Candidate type="String">
+					<Value>Reference '{0}' was not found.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="MetadataReferenceOfTypeCannotBeAssignedToType" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/MetadataReferenceOfTypeCannotBeAssignedToType">
+				<Candidate type="String">
+					<Value>The object with reference id '{0}' of type '{1}' cannot be assigned to the type '{2}'.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="MetadataStandaloneValuesProperty" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/MetadataStandaloneValuesProperty">
+				<Candidate type="String">
+					<Value>A '$values' metadata property must always be preceded by other metadata properties, such as '$id' or '$type'.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="MetadataUnexpectedProperty" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/MetadataUnexpectedProperty">
+				<Candidate type="String">
+					<Value>The metadata property is either not supported by the type or is not the first property in the deserialized JSON object.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="MetadataValueWasNotString" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/MetadataValueWasNotString">
+				<Candidate type="String">
+					<Value>The '$id', '$ref' or '$type' metadata properties must be JSON strings. Current token type is '{0}'.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="MismatchedObjectArray" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/MismatchedObjectArray">
+				<Candidate type="String">
+					<Value>'{0}' is invalid without a matching open.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="MissingFSharpCoreMember" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/MissingFSharpCoreMember">
+				<Candidate type="String">
+					<Value>Could not locate required member '{0}' from FSharp.Core. This might happen because your application has enabled member-level trimming.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="MultipleMembersBindWithConstructorParameter" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/MultipleMembersBindWithConstructorParameter">
+				<Candidate type="String">
+					<Value>Members '{0}' and '{1}' on type '{2}' cannot both bind with parameter '{3}' in the deserialization constructor.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="NamingPolicyReturnNull" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/NamingPolicyReturnNull">
+				<Candidate type="String">
+					<Value>The naming policy '{0}' cannot return null.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="NodeAlreadyHasParent" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/NodeAlreadyHasParent">
+				<Candidate type="String">
+					<Value>The node already has a parent.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="NodeCycleDetected" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/NodeCycleDetected">
+				<Candidate type="String">
+					<Value>A node cycle was detected.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="NodeDuplicateKey" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/NodeDuplicateKey">
+				<Candidate type="String">
+					<Value>An item with the same key has already been added. Key: {0}</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="NodeElementCannotBeObjectOrArray" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/NodeElementCannotBeObjectOrArray">
+				<Candidate type="String">
+					<Value>The element cannot be an object or array.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="NodeElementWrongType" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/NodeElementWrongType">
+				<Candidate type="String">
+					<Value>The element must be of type '{0}'</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="NodeJsonObjectCustomConverterNotAllowedOnExtensionProperty" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/NodeJsonObjectCustomConverterNotAllowedOnExtensionProperty">
+				<Candidate type="String">
+					<Value>A custom converter for JsonObject is not allowed on an extension property.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="NodeParentWrongType" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/NodeParentWrongType">
+				<Candidate type="String">
+					<Value>The node must have a parent node of type '{0}'.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="NodeUnableToConvert" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/NodeUnableToConvert">
+				<Candidate type="String">
+					<Value>A value of type '{0}' cannot be converted to a '{1}'.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="NodeUnableToConvertElement" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/NodeUnableToConvertElement">
+				<Candidate type="String">
+					<Value>An element of type '{0}' cannot be converted to a '{1}'.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="NodeValueNotAllowed" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/NodeValueNotAllowed">
+				<Candidate type="String">
+					<Value>A JsonNode cannot be used as a value.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="NodeWrongType" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/NodeWrongType">
+				<Candidate type="String">
+					<Value>The node must be of type '{0}'.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="NoMetadataForType" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/NoMetadataForType">
+				<Candidate type="String">
+					<Value>JsonTypeInfo metadata for type '{0}' was not provided by TypeInfoResolver of type '{1}'. If using source generation, ensure that all root types passed to the serializer have been annotated with 'JsonSerializableAttribute', along with any types that might be serialized polymorphically.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="NoMetadataForTypeProperties" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/NoMetadataForTypeProperties">
+				<Candidate type="String">
+					<Value>TypeInfoResolver '{0}' did not provide property metadata for type '{1}'.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="NotEnoughData" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/NotEnoughData">
+				<Candidate type="String">
+					<Value>There is not enough data to read through the entire JSON array or object.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="NumberHandlingOnPropertyInvalid" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/NumberHandlingOnPropertyInvalid">
+				<Candidate type="String">
+					<Value>'JsonNumberHandlingAttribute' is only valid on a number or a collection of numbers when applied to a property or field. See member '{0}' on type '{1}'.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="ObjectCreationHandlingPopulateNotSupportedByConverter" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/ObjectCreationHandlingPopulateNotSupportedByConverter">
+				<Candidate type="String">
+					<Value>Property '{0}' on type '{1}' is marked with JsonObjectCreationHandling.Populate but it doesn't support populating. This can be either because the property type is immutable or it could use a custom converter.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="ObjectCreationHandlingPropertyCannotAllowPolymorphicDeserialization" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/ObjectCreationHandlingPropertyCannotAllowPolymorphicDeserialization">
+				<Candidate type="String">
+					<Value>Property '{0}' on type '{1}' is marked with JsonObjectCreationHandling.Populate but its type allows polymorphic deserialization.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="ObjectCreationHandlingPropertyCannotAllowReadOnlyMember" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/ObjectCreationHandlingPropertyCannotAllowReadOnlyMember">
+				<Candidate type="String">
+					<Value>Property '{0}' on type '{1}' is marked with JsonObjectCreationHandling.Populate but it is a read-only member and JsonSerializerOptions has IgnoreReadOnlyProperties or IgnoreReadOnlyFields set.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="ObjectCreationHandlingPropertyCannotAllowReferenceHandling" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/ObjectCreationHandlingPropertyCannotAllowReferenceHandling">
+				<Candidate type="String">
+					<Value>JsonObjectCreationHandling.Populate is incompatible with reference handling.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="ObjectCreationHandlingPropertyDoesNotSupportParameterizedConstructors" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/ObjectCreationHandlingPropertyDoesNotSupportParameterizedConstructors">
+				<Candidate type="String">
+					<Value>JsonObjectCreationHandling.Populate is currently not supported in types with parameterized constructors.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="ObjectCreationHandlingPropertyMustHaveAGetter" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/ObjectCreationHandlingPropertyMustHaveAGetter">
+				<Candidate type="String">
+					<Value>Property '{0}' on type '{1}' is marked with JsonObjectCreationHandling.Populate but it doesn't have a getter.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="ObjectCreationHandlingPropertyValueTypeMustHaveASetter" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/ObjectCreationHandlingPropertyValueTypeMustHaveASetter">
+				<Candidate type="String">
+					<Value>Property '{0}' on type '{1}' is marked with JsonObjectCreationHandling.Populate but is a value type that doesn't have a setter.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="ObjectDepthTooLarge" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/ObjectDepthTooLarge">
+				<Candidate type="String">
+					<Value>The maximum configured depth of {0} has been exceeded. Cannot read next JSON object.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="ObjectWithParameterizedCtorRefMetadataNotSupported" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/ObjectWithParameterizedCtorRefMetadataNotSupported">
+				<Candidate type="String">
+					<Value>Reference metadata is not supported when deserializing constructor parameters. See type '{0}'.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="OnDeserializingCallbacksNotSupported" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/OnDeserializingCallbacksNotSupported">
+				<Candidate type="String">
+					<Value>The type '{0}' does not support setting OnDeserializing callbacks.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="PipeWriterCanceled" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/PipeWriterCanceled">
+				<Candidate type="String">
+					<Value>PipeWriter.FlushAsync was canceled.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="PipeWriter_DoesNotImplementUnflushedBytes" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/PipeWriter_DoesNotImplementUnflushedBytes">
+				<Candidate type="String">
+					<Value>The PipeWriter '{0}' does not implement PipeWriter.UnflushedBytes.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="Polymorphism_BaseConverterDoesNotSupportMetadata" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/Polymorphism_BaseConverterDoesNotSupportMetadata">
+				<Candidate type="String">
+					<Value>The converter for polymorphic type '{0}' does not support metadata writes or reads.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="Polymorphism_ConfigurationDoesNotSpecifyDerivedTypes" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/Polymorphism_ConfigurationDoesNotSpecifyDerivedTypes">
+				<Candidate type="String">
+					<Value>Polymorphic configuration for type '{0}' should specify at least one derived type.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="Polymorphism_DerivedConverterDoesNotSupportMetadata" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/Polymorphism_DerivedConverterDoesNotSupportMetadata">
+				<Candidate type="String">
+					<Value>The converter for derived type '{0}' does not support metadata writes or reads.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="Polymorphism_DerivedTypeIsAlreadySpecified" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/Polymorphism_DerivedTypeIsAlreadySpecified">
+				<Candidate type="String">
+					<Value>The polymorphic type '{0}' has already specified derived type '{1}'.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="Polymorphism_DerivedTypeIsNotSupported" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/Polymorphism_DerivedTypeIsNotSupported">
+				<Candidate type="String">
+					<Value>Specified type '{0}' is not a supported derived type for the polymorphic type '{1}'. Derived types must be assignable to the base type, must not be generic and cannot be abstract classes or interfaces unless 'JsonUnknownDerivedTypeHandling.FallBackToNearestAncestor' is specified.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="Polymorphism_InvalidCustomTypeDiscriminatorPropertyName" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/Polymorphism_InvalidCustomTypeDiscriminatorPropertyName">
+				<Candidate type="String">
+					<Value>The metadata property names '$id', '$ref', and '$values' are reserved and cannot be used as custom type discriminator property names.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="Polymorphism_RuntimeTypeDiamondAmbiguity" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/Polymorphism_RuntimeTypeDiamondAmbiguity">
+				<Candidate type="String">
+					<Value>Runtime type '{0}' has a diamond ambiguity between derived types '{1}' and '{2}' of polymorphic type '{3}'. Consider either removing one of the derived types or removing the 'JsonUnknownDerivedTypeHandling.FallBackToNearestAncestor' setting.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="Polymorphism_RuntimeTypeNotSupported" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/Polymorphism_RuntimeTypeNotSupported">
+				<Candidate type="String">
+					<Value>Runtime type '{0}' is not supported by polymorphic type '{1}'.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="Polymorphism_TypeDicriminatorIdIsAlreadySpecified" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/Polymorphism_TypeDicriminatorIdIsAlreadySpecified">
+				<Candidate type="String">
+					<Value>The polymorphic type '{0}' has already specified a type discriminator '{1}'.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="Polymorphism_TypeDoesNotSupportPolymorphism" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/Polymorphism_TypeDoesNotSupportPolymorphism">
+				<Candidate type="String">
+					<Value>Specified type '{0}' does not support polymorphism. Polymorphic types cannot be structs, sealed types, generic types or System.Object.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="Polymorphism_UnrecognizedTypeDiscriminator" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/Polymorphism_UnrecognizedTypeDiscriminator">
+				<Candidate type="String">
+					<Value>Read unrecognized type discriminator id '{0}'.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="PropertyGetterDisallowNull" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/PropertyGetterDisallowNull">
+				<Candidate type="String">
+					<Value>The property or field '{0}' on type '{1}' doesn't allow getting null values. Consider updating its nullability annotation.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="PropertyNameTooLarge" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/PropertyNameTooLarge">
+				<Candidate type="String">
+					<Value>The JSON property name of length {0} is too large and not supported.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="PropertySetterDisallowNull" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/PropertySetterDisallowNull">
+				<Candidate type="String">
+					<Value>The property or field '{0}' on type '{1}' doesn't allow setting null values. Consider updating its nullability annotation.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="PropertyTypeNotNullable" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/PropertyTypeNotNullable">
+				<Candidate type="String">
+					<Value>The property type '{0}' does not support null values and therefore cannot be marked as nullable.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="RequiredDigitNotFoundAfterDecimal" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/RequiredDigitNotFoundAfterDecimal">
+				<Candidate type="String">
+					<Value>'{0}' is invalid within a number, immediately after a decimal point ('.'). Expected a digit ('0'-'9').</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="RequiredDigitNotFoundAfterSign" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/RequiredDigitNotFoundAfterSign">
+				<Candidate type="String">
+					<Value>'{0}' is invalid within a number, immediately after a sign character ('+' or '-'). Expected a digit ('0'-'9').</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="RequiredDigitNotFoundEndOfData" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/RequiredDigitNotFoundEndOfData">
+				<Candidate type="String">
+					<Value>Expected a digit ('0'-'9'), but instead reached end of data.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="ResolverTypeInfoOptionsNotCompatible" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/ResolverTypeInfoOptionsNotCompatible">
+				<Candidate type="String">
+					<Value>The IJsonTypeInfoResolver returned a JsonTypeInfo instance whose JsonSerializerOptions setting does not match the provided argument.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="ResolverTypeNotCompatible" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/ResolverTypeNotCompatible">
+				<Candidate type="String">
+					<Value>The IJsonTypeInfoResolver returned an incompatible JsonTypeInfo instance of type '{0}', expected type '{1}'.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="SerializationConverterNotCompatible" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/SerializationConverterNotCompatible">
+				<Candidate type="String">
+					<Value>The converter '{0}' is not compatible with the type '{1}'.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="SerializationConverterOnAttributeInvalid" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/SerializationConverterOnAttributeInvalid">
+				<Candidate type="String">
+					<Value>The converter specified on '{0}' does not derive from JsonConverter or have a public parameterless constructor.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="SerializationConverterOnAttributeNotCompatible" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/SerializationConverterOnAttributeNotCompatible">
+				<Candidate type="String">
+					<Value>The converter specified on '{0}' is not compatible with the type '{1}'.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="SerializationConverterRead" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/SerializationConverterRead">
+				<Candidate type="String">
+					<Value>The converter '{0}' read too much or not enough.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="SerializationConverterWrite" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/SerializationConverterWrite">
+				<Candidate type="String">
+					<Value>The converter '{0}' wrote too much or not enough.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="SerializationDataExtensionPropertyInvalid" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/SerializationDataExtensionPropertyInvalid">
+				<Candidate type="String">
+					<Value>The extension data property '{0}.{1}' is invalid. It must implement 'IDictionary&lt;string, JsonElement&gt;' or 'IDictionary&lt;string, object&gt;', or be 'JsonObject'.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="SerializationDuplicateAttribute" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/SerializationDuplicateAttribute">
+				<Candidate type="String">
+					<Value>The attribute '{0}' cannot exist more than once on '{1}'.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="SerializationDuplicateTypeAttribute" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/SerializationDuplicateTypeAttribute">
+				<Candidate type="String">
+					<Value>The type '{0}' cannot have more than one member that has the attribute '{1}'.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="SerializationInvalidBufferSize" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/SerializationInvalidBufferSize">
+				<Candidate type="String">
+					<Value>The value must be greater than zero.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="SerializationNotSupportedParentType" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/SerializationNotSupportedParentType">
+				<Candidate type="String">
+					<Value>The unsupported member type is located on type '{0}'.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="SerializationNotSupportedType" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/SerializationNotSupportedType">
+				<Candidate type="String">
+					<Value>The type '{0}' is not supported.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="SerializerContextOptionsReadOnly" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/SerializerContextOptionsReadOnly">
+				<Candidate type="String">
+					<Value>JsonSerializerOptions instances cannot be modified once encapsulated by a JsonSerializerContext. Such encapsulation can happen either when calling 'JsonSerializerOptions.AddContext' or when passing the options instance to a JsonSerializerContext constructor.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="SerializerConverterFactoryInvalidArgument" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/SerializerConverterFactoryInvalidArgument">
+				<Candidate type="String">
+					<Value>The type '{0}' is not supported by the current JsonConverterFactory.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="SerializerConverterFactoryReturnsJsonConverterFactory" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/SerializerConverterFactoryReturnsJsonConverterFactory">
+				<Candidate type="String">
+					<Value>The converter '{0}' cannot return an instance of JsonConverterFactory.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="SerializerConverterFactoryReturnsNull" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/SerializerConverterFactoryReturnsNull">
+				<Candidate type="String">
+					<Value>The converter '{0}' cannot return a null value.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="SerializerCycleDetected" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/SerializerCycleDetected">
+				<Candidate type="String">
+					<Value>A possible object cycle was detected. This can either be due to a cycle or if the object depth is larger than the maximum allowed depth of {0}. Consider using ReferenceHandler.Preserve on JsonSerializerOptions to support cycles.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="SerializerOptionsReadOnly" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/SerializerOptionsReadOnly">
+				<Candidate type="String">
+					<Value>This JsonSerializerOptions instance is read-only or has already been used in serialization or deserialization.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="SerializerOptions_InvalidChainedResolver" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/SerializerOptions_InvalidChainedResolver">
+				<Candidate type="String">
+					<Value>Cannot insert the values of 'TypeInfoResolver' or 'TypeInfoResolverChain' to 'TypeInfoResolverChain'.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="SerializerPropertyNameConflict" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/SerializerPropertyNameConflict">
+				<Candidate type="String">
+					<Value>The JSON property name for '{0}.{1}' collides with another property.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="SerializerPropertyNameNull" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/SerializerPropertyNameNull">
+				<Candidate type="String">
+					<Value>The JSON property name for '{0}.{1}' cannot be null.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="SerializeTypeInstanceNotSupported" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/SerializeTypeInstanceNotSupported">
+				<Candidate type="String">
+					<Value>Serialization and deserialization of '{0}' instances is not supported.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="SerializeUnableToSerialize" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/SerializeUnableToSerialize">
+				<Candidate type="String">
+					<Value>The object or value could not be serialized.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="SpecialNumberValuesNotSupported" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/SpecialNumberValuesNotSupported">
+				<Candidate type="String">
+					<Value>.NET number values such as positive and negative infinity cannot be written as valid JSON. To make it work when using 'JsonSerializer', consider specifying 'JsonNumberHandling.AllowNamedFloatingPointLiterals' (see https://learn.microsoft.com/dotnet/api/system.text.json.serialization.jsonnumberhandling).</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="StreamNotWritable" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/StreamNotWritable">
+				<Candidate type="String">
+					<Value>Stream is not writable.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="TrailingCommaNotAllowedBeforeArrayEnd" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/TrailingCommaNotAllowedBeforeArrayEnd">
+				<Candidate type="String">
+					<Value>The JSON array contains a trailing comma at the end which is not supported in this mode. Change the reader options.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="TrailingCommaNotAllowedBeforeObjectEnd" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/TrailingCommaNotAllowedBeforeObjectEnd">
+				<Candidate type="String">
+					<Value>The JSON object contains a trailing comma at the end which is not supported in this mode. Change the reader options.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="TypeInfoImmutable" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/TypeInfoImmutable">
+				<Candidate type="String">
+					<Value>This JsonTypeInfo instance is marked read-only or has already been used in serialization or deserialization.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="TypeInfoResolverChainImmutable" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/TypeInfoResolverChainImmutable">
+				<Candidate type="String">
+					<Value>The specified IJsonTypeInfoResolver chain cannot be modified.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="TypeRequiresAsyncSerialization" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/TypeRequiresAsyncSerialization">
+				<Candidate type="String">
+					<Value>The type '{0}' can only be serialized using async serialization methods.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="UnexpectedEndOfDataWhileReadingComment" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/UnexpectedEndOfDataWhileReadingComment">
+				<Candidate type="String">
+					<Value>Unexpected end of data while reading a comment.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="UnexpectedEndOfLineSeparator" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/UnexpectedEndOfLineSeparator">
+				<Candidate type="String">
+					<Value>Found invalid line or paragraph separator character while reading a comment.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="UnmappedJsonProperty" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/UnmappedJsonProperty">
+				<Candidate type="String">
+					<Value>The JSON property '{0}' could not be mapped to any .NET member contained in type '{1}'.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="UnsupportedEnumIdentifier" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/UnsupportedEnumIdentifier">
+				<Candidate type="String">
+					<Value>Enum type '{0}' uses unsupported identifier '{1}'. It must not be null, empty, or containing leading or trailing whitespace. Flags enums must additionally not contain commas.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="UnsupportedFormat" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/UnsupportedFormat">
+				<Candidate type="String">
+					<Value>The JSON value is not in a supported {0} format.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="ValueTooLarge" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/ValueTooLarge">
+				<Candidate type="String">
+					<Value>The JSON value of length {0} is too large and not supported.</Value>
+				</Candidate>
+			</NamedResource>
+			<NamedResource name="ZeroDepthAtEnd" uri="ms-resource://HeartRateWidget/FxResources.System.Text.Json.SR/ZeroDepthAtEnd">
+				<Candidate type="String">
+					<Value>Expected depth to be zero at the end of the JSON payload. There is an open JSON object or array that should be closed.</Value>
+				</Candidate>
+			</NamedResource>
+		</ResourceMapSubtree>
+	</ResourceMap>
+</PriInfo>
