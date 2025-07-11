@@ -123,8 +123,13 @@
     </Extension>
   </Extensions>
   <Capabilities>
+    <!-- 必须的网络权限 -->
     <Capability Name="internetClient" />
     <Capability Name="internetClientServer" />
+    <!-- 如果需要访问局域网，添加这个权限 -->
+    <Capability Name="privateNetworkClientServer" />
+    <!-- 如果需要访问家庭或工作网络 -->
+    <uap:Capability Name="enterpriseAuthentication" />
   </Capabilities>
   <build:Metadata>
     <build:Item Name="TargetFrameworkMoniker" Value=".NETCore,Version=v5.0" />

@@ -7,7 +7,7 @@
 
   有关程序包清单文件的详细信息，请参阅 http://go.microsoft.com/fwlink/?LinkID=241727
  -->
-  <Identity Name="HeartRateWidget" Publisher="CN=ccc007ccc" Version="3.0.1.0" ProcessorArchitecture="x64" />
+  <Identity Name="HeartRateWidget" Publisher="CN=ccc007ccc" Version="3.0.3.0" ProcessorArchitecture="x64" />
   <mp:PhoneIdentity PhoneProductId="4b9dee15-da50-4b0a-8337-9b84da542023" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
     <DisplayName>HeartRateWidget</DisplayName>
@@ -110,8 +110,13 @@
     </Extension>
   </Extensions>
   <Capabilities>
+    <!-- 必须的网络权限 -->
     <Capability Name="internetClient" />
     <Capability Name="internetClientServer" />
+    <!-- 如果需要访问局域网，添加这个权限 -->
+    <Capability Name="privateNetworkClientServer" />
+    <!-- 如果需要访问家庭或工作网络 -->
+    <uap:Capability Name="enterpriseAuthentication" />
   </Capabilities>
   <build:Metadata>
     <build:Item Name="TargetFrameworkMoniker" Value=".NETCore,Version=v5.0" />

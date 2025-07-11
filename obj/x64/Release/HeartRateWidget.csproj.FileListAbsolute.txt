@@ -670,3 +670,4 @@ C:\Users\14929\Documents\code\UWP\XboxGameBarSamples\Samples\WidgetSampleCS\obj\
 C:\Users\14929\Documents\code\UWP\XboxGameBarSamples\Samples\WidgetSampleCS\obj\x64\Release\ilc\intermediate\rhbindargs.HeartRateWidget.rsp
 C:\Users\14929\Documents\code\UWP\XboxGameBarSamples\Samples\WidgetSampleCS\obj\x64\Release\ilc\intermediate\System.Private.HeartRateWidget.Generated.dll
 C:\Users\14929\Documents\code\UWP\XboxGameBarSamples\Samples\WidgetSampleCS\obj\x64\Release\.winmd_cache\$Microsoft.Gaming.XboxGameBar.winmd_638853356940000000.json
+C:\Users\14929\Documents\code\UWP\XboxGameBarSamples\Samples\WidgetSampleCS\obj\x64\Release\.winmd_cache\$Microsoft.Web.WebView2.Core.winmd_638644933220000000.json
