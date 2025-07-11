@@ -2,6 +2,7 @@
 using System.Net.Http;
 using System.Text.Json;
 using System.Threading.Tasks;
+using System.Net;
 using Windows.Storage;
 using Windows.UI;
 using Windows.UI.Core;
@@ -17,13 +18,15 @@ namespace HeartRateWidget
     {
         private static readonly HttpClient httpClient = new HttpClient { Timeout = TimeSpan.FromSeconds(2) };
         private DispatcherTimer timer;
+        private string apiIp = "127.0.0.1";
         private string apiPort = "8000";
         private string apiUrl;
 
         private const double baseWidth = 200.0;
         private const double baseHeight = 100.0;
 
-        // 只保留需要的设置键
+        // 设置键
+        private const string SettingApiIp = "apiIp";
         private const string SettingApiPort = "apiPort";
         private const string SettingWidgetSize = "widgetSize";
         private const string SettingBgColorR = "bgColorR";
@@ -59,19 +62,37 @@ namespace HeartRateWidget
 
         private void UpdateApiUrl()
         {
-            apiUrl = $"http://127.0.0.1:{apiPort}/heartrate";
+            apiUrl = $"http://{apiIp}:{apiPort}/heartrate";
         }
 
         private void LoadAllSettings()
         {
+            // 加载IP设置
+            object ip = ApplicationData.Current.LocalSettings.Values[SettingApiIp];
+            apiIp = ip is string ipStr && !string.IsNullOrWhiteSpace(ipStr) ? ipStr : "127.0.0.1";
+            ApiIpTextBox.Text = apiIp;
+
+            // 加载端口设置
             object port = ApplicationData.Current.LocalSettings.Values[SettingApiPort];
             apiPort = port is string p && !string.IsNullOrWhiteSpace(p) ? p : "8000";
             ApiPortTextBox.Text = apiPort;
 
-            object size = ApplicationData.Current.LocalSettings.Values[SettingWidgetSize]; SizeSlider.Value = (size is double s) ? s : 65.0;
-            object r = ApplicationData.Current.LocalSettings.Values[SettingBgColorR]; object g = ApplicationData.Current.LocalSettings.Values[SettingBgColorG]; object b = ApplicationData.Current.LocalSettings.Values[SettingBgColorB]; RedSlider.Value = (r is double rd) ? rd : 0; GreenSlider.Value = (g is double gd) ? gd : 0; BlueSlider.Value = (b is double bd) ? bd : 0;
-            object opacity = ApplicationData.Current.LocalSettings.Values[SettingBackgroundOpacity]; OpacitySlider.Value = (opacity is double o) ? o : 70.0;
-            object blur = ApplicationData.Current.LocalSettings.Values[SettingIsBlurEffectEnabled]; BlurEffectToggle.IsOn = (blur is bool bl) ? bl : true;
+            // 加载其他设置
+            object size = ApplicationData.Current.LocalSettings.Values[SettingWidgetSize];
+            SizeSlider.Value = (size is double s) ? s : 65.0;
+
+            object r = ApplicationData.Current.LocalSettings.Values[SettingBgColorR];
+            object g = ApplicationData.Current.LocalSettings.Values[SettingBgColorG];
+            object b = ApplicationData.Current.LocalSettings.Values[SettingBgColorB];
+            RedSlider.Value = (r is double rd) ? rd : 0;
+            GreenSlider.Value = (g is double gd) ? gd : 0;
+            BlueSlider.Value = (b is double bd) ? bd : 0;
+
+            object opacity = ApplicationData.Current.LocalSettings.Values[SettingBackgroundOpacity];
+            OpacitySlider.Value = (opacity is double o) ? o : 70.0;
+
+            object blur = ApplicationData.Current.LocalSettings.Values[SettingIsBlurEffectEnabled];
+            BlurEffectToggle.IsOn = (blur is bool bl) ? bl : true;
 
             UpdateBackground();
             UpdateWidgetSize(SizeSlider.Value);
@@ -79,24 +100,45 @@ namespace HeartRateWidget
 
         private void SubscribeToSettingChanges()
         {
+            ApiIpTextBox.LostFocus += ApiIpTextBox_LostFocus;
+            ApiPortTextBox.LostFocus += ApiPortTextBox_LostFocus;
             BlurEffectToggle.Toggled += BlurEffectToggle_Toggled;
             OpacitySlider.ValueChanged += OpacitySlider_ValueChanged;
             RedSlider.ValueChanged += ColorSliders_ValueChanged;
             GreenSlider.ValueChanged += ColorSliders_ValueChanged;
             BlueSlider.ValueChanged += ColorSliders_ValueChanged;
             SizeSlider.ValueChanged += SizeSlider_ValueChanged;
-            ApiPortTextBox.LostFocus += ApiPortTextBox_LostFocus;
         }
 
         private void UnsubscribeFromSettingChanges()
         {
+            ApiIpTextBox.LostFocus -= ApiIpTextBox_LostFocus;
+            ApiPortTextBox.LostFocus -= ApiPortTextBox_LostFocus;
             BlurEffectToggle.Toggled -= BlurEffectToggle_Toggled;
             OpacitySlider.ValueChanged -= OpacitySlider_ValueChanged;
             RedSlider.ValueChanged -= ColorSliders_ValueChanged;
             GreenSlider.ValueChanged -= ColorSliders_ValueChanged;
             BlueSlider.ValueChanged -= ColorSliders_ValueChanged;
             SizeSlider.ValueChanged -= SizeSlider_ValueChanged;
-            ApiPortTextBox.LostFocus -= ApiPortTextBox_LostFocus;
+        }
+
+        private void ApiIpTextBox_LostFocus(object sender, RoutedEventArgs e)
+        {
+            var newIp = ApiIpTextBox.Text.Trim();
+            if (IsValidIpAddress(newIp))
+            {
+                if (apiIp != newIp)
+                {
+                    apiIp = newIp;
+                    ApplicationData.Current.LocalSettings.Values[SettingApiIp] = newIp;
+                    UpdateApiUrl();
+                    Task.Run(UpdateHeartRate); // IP改变后立即刷新一次
+                }
+            }
+            else
+            {
+                ApiIpTextBox.Text = apiIp; // 恢复之前的有效IP
+            }
         }
 
         private void ApiPortTextBox_LostFocus(object sender, RoutedEventArgs e)
@@ -114,8 +156,18 @@ namespace HeartRateWidget
             }
             else
             {
-                ApiPortTextBox.Text = apiPort;
+                ApiPortTextBox.Text = apiPort; // 恢复之前的有效端口
             }
+        }
+
+        private bool IsValidIpAddress(string ip)
+        {
+            // 支持本地地址别名
+            if (ip.Equals("localhost", StringComparison.OrdinalIgnoreCase))
+                return true;
+
+            // 验证IP地址格式
+            return IPAddress.TryParse(ip, out _);
         }
 
         private void ResetSettingsButton_Click(object sender, RoutedEventArgs e)
@@ -188,13 +240,71 @@ namespace HeartRateWidget
             });
         }
 
-        private void UpdateBackground() { var acrylicBrush = (AcrylicBrush)this.Resources["AcrylicBackgroundBrush"]; var solidBrush = (SolidColorBrush)this.Resources["SolidBackgroundBrush"]; var color = Color.FromArgb(255, (byte)RedSlider.Value, (byte)GreenSlider.Value, (byte)BlueSlider.Value); double opacity = OpacitySlider.Value / 100.0; acrylicBrush.TintColor = color; acrylicBrush.TintOpacity = opacity; solidBrush.Color = color; solidBrush.Opacity = opacity; if (BlurEffectToggle.IsOn) { ContentGrid.Background = acrylicBrush; } else { ContentGrid.Background = solidBrush; } }
-        private void UpdateWidgetSize(double newValue) { if (ContentGrid != null) { double scale = newValue / 100.0; ContentGrid.Width = baseWidth * scale; ContentGrid.Height = baseHeight * scale; } }
-        private void BlurEffectToggle_Toggled(object sender, RoutedEventArgs e) { UpdateBackground(); ApplicationData.Current.LocalSettings.Values[SettingIsBlurEffectEnabled] = BlurEffectToggle.IsOn; }
-        private void OpacitySlider_ValueChanged(object sender, RangeBaseValueChangedEventArgs e) { UpdateBackground(); ApplicationData.Current.LocalSettings.Values[SettingBackgroundOpacity] = e.NewValue; }
-        private void ColorSliders_ValueChanged(object sender, RangeBaseValueChangedEventArgs e) { UpdateBackground(); ApplicationData.Current.LocalSettings.Values[SettingBgColorR] = RedSlider.Value; ApplicationData.Current.LocalSettings.Values[SettingBgColorG] = GreenSlider.Value; ApplicationData.Current.LocalSettings.Values[SettingBgColorB] = BlueSlider.Value; }
-        private void SizeSlider_ValueChanged(object sender, RangeBaseValueChangedEventArgs e) { UpdateWidgetSize(e.NewValue); ApplicationData.Current.LocalSettings.Values[SettingWidgetSize] = e.NewValue; }
-        private void Grid_RightTapped(object sender, RightTappedRoutedEventArgs e) { FlyoutBase.ShowAttachedFlyout((FrameworkElement)sender); }
-        public class HeartRateData { public int heart_rate { get; set; } public bool connected { get; set; } }
+        private void UpdateBackground()
+        {
+            var acrylicBrush = (AcrylicBrush)this.Resources["AcrylicBackgroundBrush"];
+            var solidBrush = (SolidColorBrush)this.Resources["SolidBackgroundBrush"];
+            var color = Color.FromArgb(255, (byte)RedSlider.Value, (byte)GreenSlider.Value, (byte)BlueSlider.Value);
+            double opacity = OpacitySlider.Value / 100.0;
+            acrylicBrush.TintColor = color;
+            acrylicBrush.TintOpacity = opacity;
+            solidBrush.Color = color;
+            solidBrush.Opacity = opacity;
+            if (BlurEffectToggle.IsOn)
+            {
+                ContentGrid.Background = acrylicBrush;
+            }
+            else
+            {
+                ContentGrid.Background = solidBrush;
+            }
+        }
+
+        private void UpdateWidgetSize(double newValue)
+        {
+            if (ContentGrid != null)
+            {
+                double scale = newValue / 100.0;
+                ContentGrid.Width = baseWidth * scale;
+                ContentGrid.Height = baseHeight * scale;
+            }
+        }
+
+        private void BlurEffectToggle_Toggled(object sender, RoutedEventArgs e)
+        {
+            UpdateBackground();
+            ApplicationData.Current.LocalSettings.Values[SettingIsBlurEffectEnabled] = BlurEffectToggle.IsOn;
+        }
+
+        private void OpacitySlider_ValueChanged(object sender, RangeBaseValueChangedEventArgs e)
+        {
+            UpdateBackground();
+            ApplicationData.Current.LocalSettings.Values[SettingBackgroundOpacity] = e.NewValue;
+        }
+
+        private void ColorSliders_ValueChanged(object sender, RangeBaseValueChangedEventArgs e)
+        {
+            UpdateBackground();
+            ApplicationData.Current.LocalSettings.Values[SettingBgColorR] = RedSlider.Value;
+            ApplicationData.Current.LocalSettings.Values[SettingBgColorG] = GreenSlider.Value;
+            ApplicationData.Current.LocalSettings.Values[SettingBgColorB] = BlueSlider.Value;
+        }
+
+        private void SizeSlider_ValueChanged(object sender, RangeBaseValueChangedEventArgs e)
+        {
+            UpdateWidgetSize(e.NewValue);
+            ApplicationData.Current.LocalSettings.Values[SettingWidgetSize] = e.NewValue;
+        }
+
+        private void Grid_RightTapped(object sender, RightTappedRoutedEventArgs e)
+        {
+            FlyoutBase.ShowAttachedFlyout((FrameworkElement)sender);
+        }
+
+        public class HeartRateData
+        {
+            public int heart_rate { get; set; }
+            public bool connected { get; set; }
+        }
     }
 }

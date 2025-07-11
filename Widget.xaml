@@ -19,6 +19,13 @@
                 <StackPanel Width="220" Spacing="10">
 
                     <StackPanel>
+                        <TextBlock Text="API 地址" FontWeight="SemiBold" Margin="0,0,0,4"/>
+                        <TextBox x:Name="ApiIpTextBox" 
+                                 PlaceholderText="例如: 127.0.0.1" 
+                                 LostFocus="ApiIpTextBox_LostFocus"/>
+                    </StackPanel>
+
+                    <StackPanel>
                         <TextBlock Text="API 端口号" FontWeight="SemiBold" Margin="0,0,0,4"/>
                         <TextBox x:Name="ApiPortTextBox" 
                                  PlaceholderText="例如: 8000" 

@@ -19,6 +19,13 @@
                 <StackPanel Width="220" Spacing="10">
 
                     <StackPanel>
+                        <TextBlock Text="API 地址" FontWeight="SemiBold" Margin="0,0,0,4"/>
+                        <TextBox x:ConnectionId='11' x:Name="ApiIpTextBox" 
+                                 PlaceholderText="例如: 127.0.0.1" 
+                                                                   />
+                    </StackPanel>
+
+                    <StackPanel>
                         <TextBlock Text="API 端口号" FontWeight="SemiBold" Margin="0,0,0,4"/>
                         <TextBox x:ConnectionId='10' x:Name="ApiPortTextBox" 
                                  PlaceholderText="例如: 8000" 
@@ -77,10 +84,10 @@
         </FlyoutBase.AttachedFlyout>
 
         <Viewbox Stretch="Uniform" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <Grid x:ConnectionId='11' x:Name="ContentGrid" MinWidth="0" MinHeight="0" CornerRadius="12" Padding="0" Background="{StaticResource SolidBackgroundBrush}">
+            <Grid x:ConnectionId='12' x:Name="ContentGrid" MinWidth="0" MinHeight="0" CornerRadius="12" Padding="0" Background="{StaticResource SolidBackgroundBrush}">
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Spacing="5" Padding="15, 10">
                     <TextBlock Text="❤️" FontSize="26" VerticalAlignment="Center" Height="36"/>
-                    <TextBlock x:ConnectionId='12' x:Name="HeartRateTextBlock" Text="--" FontSize="28" FontWeight="Bold" Foreground="White" VerticalAlignment="Center"/>
+                    <TextBlock x:ConnectionId='13' x:Name="HeartRateTextBlock" Text="--" FontSize="28" FontWeight="Bold" Foreground="White" VerticalAlignment="Center"/>
                     <TextBlock Text="bpm" FontSize="12" Foreground="Gray" VerticalAlignment="Bottom" Padding="0,0,0,4"/>
                 </StackPanel>
             </Grid>

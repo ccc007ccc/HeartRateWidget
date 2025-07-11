@@ -150,6 +150,16 @@ namespace _
 		PP_UNIQUE_CONTAINER = 36,
 	}
 
+	[global::System.Runtime.InteropServices.McgRedirectedType("Interop+BCrypt+NTSTATUS,System.Security.Cryptography.Algorithms, Version=4.3.1.0, Culture=neutral, PublicKeyToke" +
+		"n=b03f5f7f11d50a3a")]
+	public enum Interop_BCrypt_NTSTATUS__System_Security_Cryptography_Algorithms : uint
+	{
+		STATUS_SUCCESS = 0x0u,
+		STATUS_INVALID_PARAMETER = 0xC000000Du,
+		STATUS_NO_MEMORY = 0xC0000017u,
+		STATUS_NOT_FOUND = 0xC0000225u,
+	}
+
 	[global::System.Runtime.InteropServices.McgRedirectedType("Interop+BCrypt+NTSTATUS,System.Security.Cryptography.X509Certificates, Version=4.2.1.0, Culture=neutral, PublicK" +
 		"eyToken=b03f5f7f11d50a3a")]
 	public enum Interop_BCrypt_NTSTATUS__System_Security_Cryptography_X509Certificates : uint
@@ -170,16 +180,6 @@ namespace _
 		CRYPT_OID_INFO_SIGN_KEY = 4,
 		CRYPT_OID_INFO_CNG_ALGID_KEY = 5,
 		CRYPT_OID_INFO_CNG_SIGN_KEY = 6,
-	}
-
-	[global::System.Runtime.InteropServices.McgRedirectedType("Interop+BCrypt+NTSTATUS,System.Security.Cryptography.Algorithms, Version=4.3.1.0, Culture=neutral, PublicKeyToke" +
-		"n=b03f5f7f11d50a3a")]
-	public enum Interop_BCrypt_NTSTATUS__System_Security_Cryptography_Algorithms : uint
-	{
-		STATUS_SUCCESS = 0x0u,
-		STATUS_INVALID_PARAMETER = 0xC000000Du,
-		STATUS_NO_MEMORY = 0xC0000017u,
-		STATUS_NOT_FOUND = 0xC0000225u,
 	}
 
 	[global::System.Flags]
@@ -396,29 +396,6 @@ namespace Internal.Cryptography.Pal.Native
 		}
 	}
 
-	[global::System.Runtime.InteropServices.McgRedirectedType("Internal.Cryptography.Pal.Native.SafeCertContextHandleWithKeyContainerDeletion,System.Security.Cryptography.X509" +
-		"Certificates, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
-	public unsafe class SafeCertContextHandleWithKeyContainerDeletion__System_Security_Cryptography_X509Certificates : global::System.Runtime.InteropServices.SafeHandle
-	{
-		public SafeCertContextHandleWithKeyContainerDeletion__System_Security_Cryptography_X509Certificates() : 
-				base(default(global::System.IntPtr), false)
-		{
-		}
-
-		public override bool IsInvalid
-		{
-			get
-			{
-				return false;
-			}
-		}
-
-		protected override bool ReleaseHandle()
-		{
-			return false;
-		}
-	}
-
 	[global::System.Runtime.InteropServices.McgRedirectedType("Internal.Cryptography.Pal.Native.SafeCertStoreHandle,System.Security.Cryptography.X509Certificates, Version=4.2." +
 		"1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
 	public unsafe class SafeCertStoreHandle__System_Security_Cryptography_X509Certificates : global::System.Runtime.InteropServices.SafeHandle
@@ -447,6 +424,29 @@ namespace Internal.Cryptography.Pal.Native
 	public unsafe class SafeCryptMsgHandle__System_Security_Cryptography_X509Certificates : global::System.Runtime.InteropServices.SafeHandle
 	{
 		public SafeCryptMsgHandle__System_Security_Cryptography_X509Certificates() : 
+				base(default(global::System.IntPtr), false)
+		{
+		}
+
+		public override bool IsInvalid
+		{
+			get
+			{
+				return false;
+			}
+		}
+
+		protected override bool ReleaseHandle()
+		{
+			return false;
+		}
+	}
+
+	[global::System.Runtime.InteropServices.McgRedirectedType("Internal.Cryptography.Pal.Native.SafeCertContextHandleWithKeyContainerDeletion,System.Security.Cryptography.X509" +
+		"Certificates, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+	public unsafe class SafeCertContextHandleWithKeyContainerDeletion__System_Security_Cryptography_X509Certificates : global::System.Runtime.InteropServices.SafeHandle
+	{
+		public SafeCertContextHandleWithKeyContainerDeletion__System_Security_Cryptography_X509Certificates() : 
 				base(default(global::System.IntPtr), false)
 		{
 		}
