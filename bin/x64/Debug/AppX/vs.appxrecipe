@@ -30,13 +30,13 @@
     <AppXManifest Include="C:\Users\14929\Documents\code\UWP\XboxGameBarSamples\Samples\WidgetSampleCS\bin\x64\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2025-07-11T14:08:41.029</Modified>
+      <Modified>2025-07-12T16:41:29.644</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\14929\Documents\code\UWP\XboxGameBarSamples\Samples\WidgetSampleCS\bin\x64\Debug\HeartRateWidget.exe">
       <PackagePath>entrypoint\HeartRateWidget.exe</PackagePath>
-      <Modified>2025-07-11T14:08:40.733</Modified>
+      <Modified>2025-07-12T16:41:28.799</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\14929\.nuget\packages\microsoft.bcl.asyncinterfaces\9.0.6\lib\netstandard2.0\Microsoft.Bcl.AsyncInterfaces.dll">
       <PackagePath>Microsoft.Bcl.AsyncInterfaces.dll</PackagePath>
@@ -309,15 +309,15 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\14929\Documents\code\UWP\XboxGameBarSamples\Samples\WidgetSampleCS\bin\x64\Debug\HeartRateWidget.xr.xml">
       <PackagePath>HeartRateWidget.xr.xml</PackagePath>
-      <Modified>2025-07-11T14:08:40.649</Modified>
+      <Modified>2025-07-12T16:41:28.637</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\14929\Documents\code\UWP\XboxGameBarSamples\Samples\WidgetSampleCS\bin\x64\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2025-07-11T14:08:40.653</Modified>
+      <Modified>2025-07-12T16:41:28.656</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\14929\Documents\code\UWP\XboxGameBarSamples\Samples\WidgetSampleCS\bin\x64\Debug\Widget.xbf">
       <PackagePath>Widget.xbf</PackagePath>
-      <Modified>2025-07-11T14:08:40.653</Modified>
+      <Modified>2025-07-12T16:41:28.656</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.UniversalCRT.Debug\10.0.18362.0\\redist\Debug\X64\ucrtbased.dll">
       <PackagePath>ucrtbased.dll</PackagePath>
@@ -333,11 +333,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\14929\Documents\code\UWP\XboxGameBarSamples\Samples\WidgetSampleCS\bin\x64\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2025-07-11T14:05:48.886</Modified>
+      <Modified>2025-07-12T16:41:29.134</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\14929\Documents\code\UWP\XboxGameBarSamples\Samples\WidgetSampleCS\bin\x64\Debug\Core\HeartRateWidget.exe">
       <PackagePath>HeartRateWidget.exe</PackagePath>
-      <Modified>2025-07-11T14:08:41.025</Modified>
+      <Modified>2025-07-12T16:41:29.627</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

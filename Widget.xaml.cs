@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Net.Http;
+using System.Net.WebSockets;
+using System.Text;
 using System.Text.Json;
+using System.Threading;
 using System.Threading.Tasks;
-using System.Net;
 using Windows.Storage;
 using Windows.UI;
 using Windows.UI.Core;
@@ -16,18 +18,30 @@ namespace HeartRateWidget
 {
     public sealed partial class Widget : Page
     {
-        private static readonly HttpClient httpClient = new HttpClient { Timeout = TimeSpan.FromSeconds(2) };
-        private DispatcherTimer timer;
-        private string apiIp = "127.0.0.1";
-        private string apiPort = "8000";
-        private string apiUrl;
+        // --- WebSocket 客户端 ---
+        private ClientWebSocket webSocket;
+        private CancellationTokenSource cts;
 
+        // --- HTTP 客户端 (保留作为备用) ---
+        private static readonly HttpClient httpClient = new HttpClient { Timeout = TimeSpan.FromSeconds(2) };
+        private DispatcherTimer httpTimer;
+
+        // --- 连接设置 ---
+        private string httpApiIp = "127.0.0.1";
+        private string httpApiPort = "8000";
+        private string webSocketIp = "127.0.0.1";
+        private string webSocketPort = "8001";
+
+        // --- UI 基础尺寸 ---
         private const double baseWidth = 200.0;
         private const double baseHeight = 100.0;
 
-        // 设置键
-        private const string SettingApiIp = "apiIp";
-        private const string SettingApiPort = "apiPort";
+        // --- 设置存储键 ---
+        private const string SettingConnectionType = "connectionType";
+        private const string SettingHttpApiIp = "httpApiIp";
+        private const string SettingHttpApiPort = "httpApiPort";
+        private const string SettingWebSocketIp = "webSocketIp";
+        private const string SettingWebSocketPort = "webSocketPort";
         private const string SettingWidgetSize = "widgetSize";
         private const string SettingBgColorR = "bgColorR";
         private const string SettingBgColorG = "bgColorG";
@@ -44,152 +58,166 @@ namespace HeartRateWidget
 
         private void Widget_Loaded(object sender, RoutedEventArgs e)
         {
-            timer = new DispatcherTimer { Interval = TimeSpan.FromSeconds(1) };
-            timer.Tick += Timer_Tick;
-
             LoadAllSettings();
             SubscribeToSettingChanges();
-
-            UpdateApiUrl();
-            Task.Run(UpdateHeartRate);
+            StartConnection();
         }
 
-        private void Widget_Unloaded(object sender, RoutedEventArgs e)
+        private async void Widget_Unloaded(object sender, RoutedEventArgs e)
         {
-            timer?.Stop();
-            timer = null;
+            httpTimer?.Stop();
+            await DisconnectWebSocketAsync();
         }
 
-        private void UpdateApiUrl()
+        #region Connection Management
+
+        /// <summary>
+        /// 根据用户选择，启动相应的连接任务 (WebSocket或HTTP)
+        /// </summary>
+        private void StartConnection()
         {
-            apiUrl = $"http://{apiIp}:{apiPort}/heartrate";
-        }
+            // 确保先断开所有旧的连接
+            httpTimer?.Stop();
+            httpTimer = null;
+            // 异步断开WebSocket，不阻塞UI线程
+            Task.Run(DisconnectWebSocketAsync);
 
-        private void LoadAllSettings()
-        {
-            // 加载IP设置
-            object ip = ApplicationData.Current.LocalSettings.Values[SettingApiIp];
-            apiIp = ip is string ipStr && !string.IsNullOrWhiteSpace(ipStr) ? ipStr : "127.0.0.1";
-            ApiIpTextBox.Text = apiIp;
-
-            // 加载端口设置
-            object port = ApplicationData.Current.LocalSettings.Values[SettingApiPort];
-            apiPort = port is string p && !string.IsNullOrWhiteSpace(p) ? p : "8000";
-            ApiPortTextBox.Text = apiPort;
-
-            // 加载其他设置
-            object size = ApplicationData.Current.LocalSettings.Values[SettingWidgetSize];
-            SizeSlider.Value = (size is double s) ? s : 65.0;
-
-            object r = ApplicationData.Current.LocalSettings.Values[SettingBgColorR];
-            object g = ApplicationData.Current.LocalSettings.Values[SettingBgColorG];
-            object b = ApplicationData.Current.LocalSettings.Values[SettingBgColorB];
-            RedSlider.Value = (r is double rd) ? rd : 0;
-            GreenSlider.Value = (g is double gd) ? gd : 0;
-            BlueSlider.Value = (b is double bd) ? bd : 0;
-
-            object opacity = ApplicationData.Current.LocalSettings.Values[SettingBackgroundOpacity];
-            OpacitySlider.Value = (opacity is double o) ? o : 70.0;
-
-            object blur = ApplicationData.Current.LocalSettings.Values[SettingIsBlurEffectEnabled];
-            BlurEffectToggle.IsOn = (blur is bool bl) ? bl : true;
-
-            UpdateBackground();
-            UpdateWidgetSize(SizeSlider.Value);
-        }
-
-        private void SubscribeToSettingChanges()
-        {
-            ApiIpTextBox.LostFocus += ApiIpTextBox_LostFocus;
-            ApiPortTextBox.LostFocus += ApiPortTextBox_LostFocus;
-            BlurEffectToggle.Toggled += BlurEffectToggle_Toggled;
-            OpacitySlider.ValueChanged += OpacitySlider_ValueChanged;
-            RedSlider.ValueChanged += ColorSliders_ValueChanged;
-            GreenSlider.ValueChanged += ColorSliders_ValueChanged;
-            BlueSlider.ValueChanged += ColorSliders_ValueChanged;
-            SizeSlider.ValueChanged += SizeSlider_ValueChanged;
-        }
-
-        private void UnsubscribeFromSettingChanges()
-        {
-            ApiIpTextBox.LostFocus -= ApiIpTextBox_LostFocus;
-            ApiPortTextBox.LostFocus -= ApiPortTextBox_LostFocus;
-            BlurEffectToggle.Toggled -= BlurEffectToggle_Toggled;
-            OpacitySlider.ValueChanged -= OpacitySlider_ValueChanged;
-            RedSlider.ValueChanged -= ColorSliders_ValueChanged;
-            GreenSlider.ValueChanged -= ColorSliders_ValueChanged;
-            BlueSlider.ValueChanged -= ColorSliders_ValueChanged;
-            SizeSlider.ValueChanged -= SizeSlider_ValueChanged;
-        }
-
-        private void ApiIpTextBox_LostFocus(object sender, RoutedEventArgs e)
-        {
-            var newIp = ApiIpTextBox.Text.Trim();
-            if (IsValidIpAddress(newIp))
+            // 根据下拉框选择的模式启动连接
+            if (ConnectionTypeComboBox.SelectedIndex == 0) // WebSocket
             {
-                if (apiIp != newIp)
+                Task.Run(ConnectWebSocketAsync);
+            }
+            else // HTTP
+            {
+                httpTimer = new DispatcherTimer { Interval = TimeSpan.FromSeconds(1) };
+                httpTimer.Tick += HttpTimer_Tick;
+                Task.Run(UpdateHeartRateViaHttp); // 立即执行一次
+                httpTimer.Start();
+            }
+        }
+
+        /// <summary>
+        /// 异步连接到 WebSocket 服务器，包含重试逻辑。
+        /// </summary>
+        private async Task ConnectWebSocketAsync()
+        {
+            // 如果已经连接或正在连接，则直接返回
+            if (webSocket != null && (webSocket.State == WebSocketState.Open || webSocket.State == WebSocketState.Connecting))
+            {
+                return;
+            }
+
+            // UI提示正在连接
+            await UpdateDisplay("...", "Gray");
+
+            // 创建新的CancellationTokenSource和ClientWebSocket实例
+            cts = new CancellationTokenSource();
+            webSocket = new ClientWebSocket();
+            var uri = new Uri($"ws://{webSocketIp}:{webSocketPort}");
+
+            try
+            {
+                // 尝试连接
+                await webSocket.ConnectAsync(uri, cts.Token);
+                // 连接成功后，开始监听消息
+                await ListenForMessagesAsync(webSocket, cts.Token);
+            }
+            catch (Exception)
+            {
+                // 如果连接失败，则触发断线处理逻辑
+                await HandleDisconnection();
+            }
+        }
+
+        /// <summary>
+        /// 循环监听来自服务器的消息，直到连接关闭。
+        /// </summary>
+        private async Task ListenForMessagesAsync(ClientWebSocket ws, CancellationToken token)
+        {
+            var buffer = new byte[1024 * 4];
+            while (ws.State == WebSocketState.Open && !token.IsCancellationRequested)
+            {
+                try
                 {
-                    apiIp = newIp;
-                    ApplicationData.Current.LocalSettings.Values[SettingApiIp] = newIp;
-                    UpdateApiUrl();
-                    Task.Run(UpdateHeartRate); // IP改变后立即刷新一次
+                    var result = await ws.ReceiveAsync(new ArraySegment<byte>(buffer), token);
+                    if (result.MessageType == WebSocketMessageType.Text)
+                    {
+                        var json = Encoding.UTF8.GetString(buffer, 0, result.Count);
+                        await ProcessHeartRateJson(json);
+                    }
+                    else if (result.MessageType == WebSocketMessageType.Close)
+                    {
+                        await HandleDisconnection();
+                        break;
+                    }
+                }
+                catch (Exception)
+                {
+                    await HandleDisconnection();
+                    break;
                 }
             }
-            else
-            {
-                ApiIpTextBox.Text = apiIp; // 恢复之前的有效IP
-            }
         }
 
-        private void ApiPortTextBox_LostFocus(object sender, RoutedEventArgs e)
+        /// <summary>
+        /// 优雅地断开并清理 WebSocket 资源。
+        /// </summary>
+        private async Task DisconnectWebSocketAsync()
         {
-            var newPort = ApiPortTextBox.Text.Trim();
-            if (int.TryParse(newPort, out int portNumber) && portNumber > 0 && portNumber <= 65535)
+            if (webSocket != null)
             {
-                if (apiPort != newPort)
+                cts?.Cancel(); // 取消所有与此WebSocket相关的异步操作
+                if (webSocket.State == WebSocketState.Open)
                 {
-                    apiPort = newPort;
-                    ApplicationData.Current.LocalSettings.Values[SettingApiPort] = newPort;
-                    UpdateApiUrl();
-                    Task.Run(UpdateHeartRate); // 端口改变后立即刷新一次
+                    try
+                    {
+                        await webSocket.CloseAsync(WebSocketCloseStatus.NormalClosure, "Client disconnecting", CancellationToken.None);
+                    }
+                    catch { /* 忽略关闭时可能发生的异常 */ }
                 }
+                webSocket.Dispose();
+                webSocket = null;
+                cts?.Dispose();
             }
-            else
+        }
+
+        /// <summary>
+        /// 处理断线情况：更新UI，清理资源，并在延迟后尝试重连。
+        /// </summary>
+        private async Task HandleDisconnection()
+        {
+            // 确保断开并清理旧的连接资源
+            await DisconnectWebSocketAsync();
+            // 在UI上显示断线状态
+            await UpdateDisplay("N/A", "Red");
+
+            // 延迟5秒，避免过于频繁地重连
+            await Task.Delay(5000);
+
+            // 只有当用户仍然选择WebSocket模式时才重连
+            await Dispatcher.RunAsync(CoreDispatcherPriority.Normal, () =>
             {
-                ApiPortTextBox.Text = apiPort; // 恢复之前的有效端口
-            }
+                if (ConnectionTypeComboBox.SelectedIndex == 0)
+                {
+                    Task.Run(ConnectWebSocketAsync);
+                }
+            });
         }
 
-        private bool IsValidIpAddress(string ip)
+        #endregion
+
+        #region HTTP Polling (Legacy Mode)
+
+        private async void HttpTimer_Tick(object sender, object e)
         {
-            // 支持本地地址别名
-            if (ip.Equals("localhost", StringComparison.OrdinalIgnoreCase))
-                return true;
-
-            // 验证IP地址格式
-            return IPAddress.TryParse(ip, out _);
+            await UpdateHeartRateViaHttp();
         }
 
-        private void ResetSettingsButton_Click(object sender, RoutedEventArgs e)
-        {
-            ApplicationData.Current.LocalSettings.Values.Clear();
-            UnsubscribeFromSettingChanges();
-            LoadAllSettings();
-            SubscribeToSettingChanges();
-            UpdateApiUrl();
-            Task.Run(UpdateHeartRate);
-        }
-
-        private async void Timer_Tick(object sender, object e)
-        {
-            timer?.Stop();
-            await UpdateHeartRate();
-        }
-
-        private async Task UpdateHeartRate()
+        private async Task UpdateHeartRateViaHttp()
         {
             try
             {
+                var apiUrl = $"http://{httpApiIp}:{httpApiPort}/heartrate";
                 string jsonResponse = await httpClient.GetStringAsync(apiUrl);
                 await ProcessHeartRateJson(jsonResponse);
             }
@@ -197,16 +225,15 @@ namespace HeartRateWidget
             {
                 await UpdateDisplay("N/A", "Red");
             }
-            finally
-            {
-                // 派发回UI线程以安全地启动定时器
-                var ignored = Dispatcher.RunAsync(CoreDispatcherPriority.Normal, () =>
-                {
-                    timer?.Start();
-                });
-            }
         }
 
+        #endregion
+
+        #region UI Update & Data Processing
+
+        /// <summary>
+        /// 解析服务器发来的JSON数据并更新UI显示。
+        /// </summary>
         private async Task ProcessHeartRateJson(string json)
         {
             try
@@ -225,12 +252,15 @@ namespace HeartRateWidget
                     await UpdateDisplay("--", "Gray");
                 }
             }
-            catch (Exception)
+            catch (JsonException)
             {
-                await UpdateDisplay("Err", "Yellow");
+                await UpdateDisplay("Err", "Yellow"); // JSON格式错误
             }
         }
 
+        /// <summary>
+        /// 安全地在UI线程上更新心率文本和颜色。
+        /// </summary>
         private async Task UpdateDisplay(string text, string color)
         {
             await Dispatcher.RunAsync(CoreDispatcherPriority.Normal, () =>
@@ -240,16 +270,164 @@ namespace HeartRateWidget
             });
         }
 
+        #endregion
+
+        #region Settings Management
+
+        private void LoadAllSettings()
+        {
+            ConnectionTypeComboBox.SelectedIndex = (ApplicationData.Current.LocalSettings.Values[SettingConnectionType] as int?) ?? 0;
+            UpdateSettingsPanelVisibility();
+
+            httpApiIp = (ApplicationData.Current.LocalSettings.Values[SettingHttpApiIp] as string) ?? "127.0.0.1";
+            ApiIpTextBox.Text = httpApiIp;
+            httpApiPort = (ApplicationData.Current.LocalSettings.Values[SettingHttpApiPort] as string) ?? "8000";
+            ApiPortTextBox.Text = httpApiPort;
+
+            webSocketIp = (ApplicationData.Current.LocalSettings.Values[SettingWebSocketIp] as string) ?? "127.0.0.1";
+            WebSocketIpTextBox.Text = webSocketIp;
+            webSocketPort = (ApplicationData.Current.LocalSettings.Values[SettingWebSocketPort] as string) ?? "8001";
+            WebSocketPortTextBox.Text = webSocketPort;
+
+            SizeSlider.Value = (ApplicationData.Current.LocalSettings.Values[SettingWidgetSize] as double?) ?? 65.0;
+            RedSlider.Value = (ApplicationData.Current.LocalSettings.Values[SettingBgColorR] as double?) ?? 0;
+            GreenSlider.Value = (ApplicationData.Current.LocalSettings.Values[SettingBgColorG] as double?) ?? 0;
+            BlueSlider.Value = (ApplicationData.Current.LocalSettings.Values[SettingBgColorB] as double?) ?? 0;
+            OpacitySlider.Value = (ApplicationData.Current.LocalSettings.Values[SettingBackgroundOpacity] as double?) ?? 70.0;
+            BlurEffectToggle.IsOn = (ApplicationData.Current.LocalSettings.Values[SettingIsBlurEffectEnabled] as bool?) ?? true;
+
+            UpdateBackground();
+            UpdateWidgetSize(SizeSlider.Value);
+        }
+
+        private void SubscribeToSettingChanges()
+        {
+            ConnectionTypeComboBox.SelectionChanged += ConnectionTypeComboBox_SelectionChanged;
+            ApiIpTextBox.LostFocus += ApiIpTextBox_LostFocus;
+            ApiPortTextBox.LostFocus += ApiPortTextBox_LostFocus;
+            WebSocketIpTextBox.LostFocus += WebSocketIpTextBox_LostFocus;
+            WebSocketPortTextBox.LostFocus += WebSocketPortTextBox_LostFocus;
+            BlurEffectToggle.Toggled += BlurEffectToggle_Toggled;
+            OpacitySlider.ValueChanged += OpacitySlider_ValueChanged;
+            RedSlider.ValueChanged += ColorSliders_ValueChanged;
+            GreenSlider.ValueChanged += ColorSliders_ValueChanged;
+            BlueSlider.ValueChanged += ColorSliders_ValueChanged;
+            SizeSlider.ValueChanged += SizeSlider_ValueChanged;
+        }
+
+        private void UnsubscribeFromSettingChanges()
+        {
+            // 在重置等操作时取消订阅，防止意外触发事件
+            ConnectionTypeComboBox.SelectionChanged -= ConnectionTypeComboBox_SelectionChanged;
+            ApiIpTextBox.LostFocus -= ApiIpTextBox_LostFocus;
+            ApiPortTextBox.LostFocus -= ApiPortTextBox_LostFocus;
+            WebSocketIpTextBox.LostFocus -= WebSocketIpTextBox_LostFocus;
+            WebSocketPortTextBox.LostFocus -= WebSocketPortTextBox_LostFocus;
+            BlurEffectToggle.Toggled -= BlurEffectToggle_Toggled;
+            OpacitySlider.ValueChanged -= OpacitySlider_ValueChanged;
+            RedSlider.ValueChanged -= ColorSliders_ValueChanged;
+            GreenSlider.ValueChanged -= ColorSliders_ValueChanged;
+            BlueSlider.ValueChanged -= ColorSliders_ValueChanged;
+            SizeSlider.ValueChanged -= SizeSlider_ValueChanged;
+        }
+
+        #endregion
+
+        #region UI Event Handlers
+
+        private void ConnectionTypeComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            ApplicationData.Current.LocalSettings.Values[SettingConnectionType] = ConnectionTypeComboBox.SelectedIndex;
+            UpdateSettingsPanelVisibility();
+            StartConnection(); // 切换模式后，立即重新连接
+        }
+
+        private void UpdateSettingsPanelVisibility()
+        {
+            if (ConnectionTypeComboBox.SelectedIndex == 0) // WebSocket
+            {
+                WebSocketSettingsPanel.Visibility = Visibility.Visible;
+                HttpSettingsPanel.Visibility = Visibility.Collapsed;
+            }
+            else // HTTP
+            {
+                WebSocketSettingsPanel.Visibility = Visibility.Collapsed;
+                HttpSettingsPanel.Visibility = Visibility.Visible;
+            }
+        }
+
+        private void WebSocketIpTextBox_LostFocus(object sender, RoutedEventArgs e)
+        {
+            var newIp = WebSocketIpTextBox.Text.Trim();
+            if (webSocketIp != newIp)
+            {
+                webSocketIp = newIp;
+                ApplicationData.Current.LocalSettings.Values[SettingWebSocketIp] = newIp;
+                StartConnection();
+            }
+        }
+
+        private void WebSocketPortTextBox_LostFocus(object sender, RoutedEventArgs e)
+        {
+            var newPort = WebSocketPortTextBox.Text.Trim();
+            if (webSocketPort != newPort)
+            {
+                webSocketPort = newPort;
+                ApplicationData.Current.LocalSettings.Values[SettingWebSocketPort] = newPort;
+                StartConnection();
+            }
+        }
+
+        private void ApiIpTextBox_LostFocus(object sender, RoutedEventArgs e)
+        {
+            var newIp = ApiIpTextBox.Text.Trim();
+            if (httpApiIp != newIp)
+            {
+                httpApiIp = newIp;
+                ApplicationData.Current.LocalSettings.Values[SettingHttpApiIp] = newIp;
+                StartConnection();
+            }
+        }
+
+        private void ApiPortTextBox_LostFocus(object sender, RoutedEventArgs e)
+        {
+            var newPort = ApiPortTextBox.Text.Trim();
+            if (httpApiPort != newPort)
+            {
+                httpApiPort = newPort;
+                ApplicationData.Current.LocalSettings.Values[SettingHttpApiPort] = newPort;
+                StartConnection();
+            }
+        }
+
+        private void ResetSettingsButton_Click(object sender, RoutedEventArgs e)
+        {
+            UnsubscribeFromSettingChanges();
+            ApplicationData.Current.LocalSettings.Values.Clear();
+            LoadAllSettings();
+            SubscribeToSettingChanges();
+            StartConnection();
+        }
+
+        // --- 外观设置的事件处理器 ---
+
+        /// <summary>
+        /// 更新背景（亚克力效果或纯色）。
+        /// 这是修复编译错误的核心所在。
+        /// </summary>
         private void UpdateBackground()
         {
             var acrylicBrush = (AcrylicBrush)this.Resources["AcrylicBackgroundBrush"];
             var solidBrush = (SolidColorBrush)this.Resources["SolidBackgroundBrush"];
             var color = Color.FromArgb(255, (byte)RedSlider.Value, (byte)GreenSlider.Value, (byte)BlueSlider.Value);
             double opacity = OpacitySlider.Value / 100.0;
+
             acrylicBrush.TintColor = color;
             acrylicBrush.TintOpacity = opacity;
             solidBrush.Color = color;
             solidBrush.Opacity = opacity;
+
+            // **【错误修复】** 使用 if/else 替代三元表达式
             if (BlurEffectToggle.IsOn)
             {
                 ContentGrid.Background = acrylicBrush;
@@ -301,10 +479,17 @@ namespace HeartRateWidget
             FlyoutBase.ShowAttachedFlyout((FrameworkElement)sender);
         }
 
+        #endregion
+
+        /// <summary>
+        /// 用于反序列化服务器JSON数据的数据模型类。
+        /// </summary>
         public class HeartRateData
         {
             public int heart_rate { get; set; }
             public bool connected { get; set; }
+            public string status { get; set; } // 新增字段，可用于未来显示更详细的状态
+            public long timestamp { get; set; } // 新增字段
         }
     }
 }

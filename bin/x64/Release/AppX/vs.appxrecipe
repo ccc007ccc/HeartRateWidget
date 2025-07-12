@@ -30,7 +30,7 @@
     <AppXManifest Include="C:\Users\14929\Documents\code\UWP\XboxGameBarSamples\Samples\WidgetSampleCS\bin\x64\Release\ilc\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2025-07-11T13:56:26.261</Modified>
+      <Modified>2025-07-12T16:45:51.939</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
@@ -269,15 +269,15 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\14929\Documents\code\UWP\XboxGameBarSamples\Samples\WidgetSampleCS\bin\x64\Release\ilc\HeartRateWidget.dll">
       <PackagePath>HeartRateWidget.dll</PackagePath>
-      <Modified>2025-07-11T13:56:25.880</Modified>
+      <Modified>2025-07-12T16:45:51.593</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\14929\Documents\code\UWP\XboxGameBarSamples\Samples\WidgetSampleCS\bin\x64\Release\ilc\HeartRateWidget.exe">
       <PackagePath>HeartRateWidget.exe</PackagePath>
-      <Modified>2025-07-11T13:56:26.250</Modified>
+      <Modified>2025-07-12T16:45:51.928</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\14929\Documents\code\UWP\XboxGameBarSamples\Samples\WidgetSampleCS\bin\x64\Release\ilc\HeartRateWidget.pdb">
       <PackagePath>HeartRateWidget.pdb</PackagePath>
-      <Modified>2025-07-11T13:56:26.249</Modified>
+      <Modified>2025-07-12T16:45:51.927</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\14929\Documents\code\UWP\XboxGameBarSamples\Samples\WidgetSampleCS\bin\x64\Release\ilc\Microsoft.Gaming.XboxGameBar.dll">
       <PackagePath>Microsoft.Gaming.XboxGameBar.dll</PackagePath>
@@ -293,7 +293,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\14929\Documents\code\UWP\XboxGameBarSamples\Samples\WidgetSampleCS\bin\x64\Release\ilc\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2025-07-11T13:56:11.025</Modified>
+      <Modified>2025-07-12T16:45:37.359</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
